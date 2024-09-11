@@ -1,5 +1,26 @@
 :root{
     --nav-background-color: #1182BD;
+    --main-color: #1182BD;
+    --white-color: #FFFFFF;
+    --gary-color: #F8F8F8
+}
+.bgMain{
+    background: var(--main-color) !important;
+}
+.bgWhite{
+    background: var(--white-color) !important;
+}
+.bgGray{
+    background: var(--gary-color) !important;
+}
+.MainColor{
+    color: var(--main-color) !important;
+}
+.WhiteColor{
+    color: var(--white-color) !important;
+}
+.GrayColor{
+    color: var(--gary-color) !important;
 }
 
 body{
@@ -68,4 +89,47 @@ body{
         padding-top: 0.5rem ;
         padding-bottom: 0.5rem ;
     }
+}
+
+/*s mainContainer */
+.mainContainer{
+    margin: 83px 10px 0 0px;
+    background: #ffffff;
+    box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15);
+    width: calc(100% - 1.3rem);
+    min-height: 87vh;
+}
+/*e mainContainer */
+/* info */
+.borderBetween:not(:last-child) {
+    border-left: 1px solid #dee2e6 !important;}
+
+/* tabsCard */
+    .tabsCard .nav.nav-tabs {
+        display: flex !important;
+        flex-direction: row !important;
+    }
+.tabsCard .nav-tabs .nav-link.active,
+.tabsCard .nav-tabs .nav-link:hover{
+    background-color: #fff !important;
+    box-shadow: 0px 1px 5px 1px #ddd;
+    
+    font-weight: bold;
+    opacity: 1 !important;
+}
+.tabsCard .nav-tabs .nav-link{
+    color: var(--main-color) !important;
+    opacity: 0.8;
+    animation: 0.2s ease;
+    border-radius: 0.5rem;
+
+}
+.tabsCard .nav-tabs .moving-tab{
+    display: none !important;
+}
+.cardInfoHomePage{
+    border-radius: 0.5rem;
+}
+.cardInfoHomePage span{
+    font-size: 14px;    
 }
