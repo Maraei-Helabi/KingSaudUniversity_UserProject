@@ -51,6 +51,7 @@ body{
     top: 0px !important;
     width: calc(100% - 18.125rem);
     background: var(--nav-background-color) !important;
+    z-index: 2 9 !important;
 }
 
 .navbar.navbar-main img {
@@ -80,6 +81,10 @@ body{
 
 
 /* asid bar */
+.sidenav{
+
+    z-index: 3 !important;
+}
 .sidenav .sidenav-header{
     height: 67px;
 }
@@ -112,6 +117,9 @@ body{
     box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15);
     width: calc(100% - 1.3rem);
     min-height: 87vh;
+}
+.nav.nav-pills .nav-item {
+    z-index: 1 !important;
 }
 /*e mainContainer */
 /* info */
