@@ -22,7 +22,21 @@
 .GrayColor{
     color: var(--gary-color) !important;
 }
-
+.btn-outline-main {
+    --bs-btn-color: var(--main-color);
+    --bs-btn-border-color: var(--main-color);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--main-color);
+    --bs-btn-hover-border-color: var(--main-color);
+    --bs-btn-focus-shadow-rgb: 52, 71, 103;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--main-color);
+    --bs-btn-active-border-color: var(--main-color);
+    --bs-btn-active-shadow: none;
+    --bs-btn-disabled-color: var(--main-color);
+    --bs-btn-disabled-bg: transparent;
+    --bs-gradient: none;
+}
 body{
     font-family:'Tajawal' !important;
 }
@@ -129,7 +143,71 @@ body{
 }
 .cardInfoHomePage{
     border-radius: 0.5rem;
+    transition: 0.3;
 }
+.cardInfoHomePage .titleOfcardInfoHomePage{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 0.25rem;
+    padding: 2px 4px;
+}
+.cardInfoHomePage.blue:hover{
+    border: 1px solid var(--main-color);
+}
+.cardInfoHomePage.blue .titleOfcardInfoHomePage{
+    color: var(--main-color);
+    background: #0084BD1A;
+}
+
 .cardInfoHomePage span{
     font-size: 14px;    
+}
+
+.customSelect {
+    padding-left: 0.5rem !important;
+    padding-right: 2rem !important;
+    position: relative;
+}
+.customSelect:focus {
+    border-color: var(--main-color) !important;
+    outline: 0;
+    box-shadow: 0 3px 9px rgba(50, 50, 9, 0), 3px 4px 8px rgba(94, 114, 228, 0.1);
+}
+.paginationConrainer span{
+    font-size: 15px;
+    font-weight: 500;
+}
+.paginationConrainer .page-item .page-link, .page-item span {
+    border-radius: 0.5rem !important;
+}
+.paginationConrainer .page-link.active,
+.paginationConrainer .page-link:hover,
+.paginationConrainer .page-link:focus,
+.paginationConrainer .active>.page-link {
+    z-index: 3;
+    color: var(--white-color);
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+.paginationConrainer .page-item.active .page-link span,
+.paginationConrainer .page-item:hover .page-link span
+{
+    color: var(--white-color);
+}
+.customSelect::after {
+    content: '\25BC'; /* رمز السهم */
+    position: absolute;
+    right: 0.5rem; /* مكان السهم */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* منع التفاعل مع السهم */
+}
+.form-select::after {
+    content: '\25BC'; /* رمز السهم */
+    position: absolute;
+    right: 10px; /* يمكنك تعديل هذه القيمة لتغيير موضع السهم */
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
 }
