@@ -159,6 +159,34 @@ body{
     color: var(--main-color);
     background: #0084BD1A;
 }
+.cardInfoHomePage.purple:hover{
+    border: 1px solid #671BFFF0;
+}
+.cardInfoHomePage.purple .titleOfcardInfoHomePage{
+    color: #671BFFF0;
+    background: #8e56ff2e;
+}
+.cardInfoHomePage.yellow:hover{
+    border: 1px solid #c6a800;
+}
+.cardInfoHomePage.yellow .titleOfcardInfoHomePage{
+    color: #c6a800;
+    background: #f6db413d;
+}
+.cardInfoHomePage.red:hover{
+    border: 1px solid #E33E38;
+}
+.cardInfoHomePage.red .titleOfcardInfoHomePage{
+    color: #E33E38;
+    background: #e33e382d;
+}
+.cardInfoHomePage.green:hover{
+    border: 1px solid #00B379;
+}
+.cardInfoHomePage.green .titleOfcardInfoHomePage{
+    color: #00B379;
+    background: #00b37a49;
+}
 
 .cardInfoHomePage span{
     font-size: 14px;    
