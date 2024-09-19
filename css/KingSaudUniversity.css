@@ -2,7 +2,9 @@
     --nav-background-color: #1182BD;
     --main-color: #1182BD;
     --white-color: #FFFFFF;
-    --gary-color: #F8F8F8
+    --gary-color: #F8F8F8;
+
+    --bs-btn-focus-box-shadow: 0 0 0 0.2rem #1182bd63 !important;
 }
 .bgMain{
     background: var(--main-color) !important;
@@ -247,3 +249,138 @@ body{
     transform: translateY(-50%);
     pointer-events: none;
 }
+
+/* modal */
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: var(--main-color);
+    outline: 0;
+    box-shadow: 0 3px 9px rgba(50, 50, 9, 0), 3px 4px 8px rgba(94, 114, 228, 0.1);
+}
+.form-select:focus {
+    border-color: var(--main-color);
+    outline: 0;
+    box-shadow: 0 3px 9px rgba(50, 50, 9, 0), 3px 4px 8px rgba(94, 114, 228, 0.1);
+}
+
+.btn-primary {
+    --bs-btn-color: #000;
+    --bs-btn-bg: var(--main-color);
+    --bs-btn-border-color: var(--main-color);
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: #1182bdbd;
+    --bs-btn-hover-border-color: #1182bdbd;
+    --bs-btn-focus-shadow-rgb: 80, 97, 194;
+    --bs-btn-active-color: #000;
+    --bs-btn-active-bg: #1182bdbd;
+    --bs-btn-active-border-color: #1182bdbd;
+    --bs-btn-active-shadow: none;
+    --bs-btn-disabled-color: #000;
+    --bs-btn-disabled-bg: var(--main-color);
+    --bs-btn-disabled-border-color: var(--main-color);
+}
+btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle, .btn.bg-gradient-primary:not(:disabled):not(.disabled).active, .btn.bg-gradient-primary:not(:disabled):not(.disabled):active, .show>.btn.bg-gradient-primary.dropdown-toggle {
+    color: color-yiq(#5e72e4);
+    background-color: var(--main-color);
+    color: white;
+}
+.btn-primary:hover, .btn.bg-gradient-primary:hover {
+    background-color: var(--main-color);
+    border-color: #1182bdbd;
+}
+.btn-check:focus+.btn, .btn:focus {
+    color: white;
+    background-color: var(--bs-btn-hover-bg);
+    border-color: var(--bs-btn-hover-border-color);
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #1182bd63;
+}
+.btn-outline-primary {
+    --bs-btn-color: var(--main-color);
+    --bs-btn-border-color: var(--main-color);
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: var(--main-color);
+    --bs-btn-hover-border-color: var(--main-color);
+    --bs-btn-focus-shadow-rgb: 94, 114, 228;
+    --bs-btn-active-color: #000;
+    --bs-btn-active-bg: var(--main-color);
+    --bs-btn-active-border-color: var(--main-color);
+    --bs-btn-active-shadow: none;
+    --bs-btn-disabled-color: var(--main-color);
+    --bs-btn-disabled-bg: transparent;
+    --bs-gradient: none;
+}
+.btn-outline-primary:hover:not(.active) {
+    background-color: transparent;
+    opacity: .75;
+    box-shadow: none;
+    color: var(--main-color);
+}
+/* From Uiverse.io by escannord */ 
+.uploadInput {
+    max-width: 100%;
+    display: none;
+  }
+  
+  .uploadFile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 190px;
+    border: 1px solid #ccc;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    color: var(--main-color);
+    cursor: pointer;
+    border-radius: 8px;
+}
+  
+/* modal */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mobile responsive */
+@media (max-width: 480px) {
+    .nameAndImg img {
+        width: 50px;
+        margin-left: 8px;
+        border-radius: 50%;
+    }
+    .hideInMobile{
+        display: none;
+    }
+    .showInMobile{
+        display: block !important;
+    }
+    .showInMobileFlex{
+        display: flex;
+    }
+    .mainContainer.max {
+        margin: 0;
+        width: 100%;
+        /* background: var(--main-color); */
+    }
+}
+@media (min-width: 480px) {
+
+}
+/* mobile responsive */

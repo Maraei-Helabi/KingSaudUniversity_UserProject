@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 
@@ -19,6 +18,9 @@
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
   <link href="css/all.min.css" rel="stylesheet" type="text/css">
+  <!-- sweetalert2 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
   <!-- CSS Files -->
   <link id="pagestyle" href="css/argon-dashboard.css" rel="stylesheet" />
   <link href="css/KingSaudUniversity.css" rel="stylesheet">
@@ -28,7 +30,7 @@
   <!-- يعمل باك قراون ازرق -->
   <!-- <div class="min-height-300 bg-primary position-absolute w-100"></div> -->
   <aside
-    class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-2 fixed-end me-4 rotate-caret align-content-between d-flex"
+    class="hideInMobile sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-2 fixed-end me-4 rotate-caret align-content-between d-flex"
     id="sidenav-main">
     <div class="sidenav-header w-100">
       <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute start-0 top-0 d-none d-xl-none"
@@ -77,10 +79,10 @@
       </a>
     </div>
   </aside>
-  <main class="main-content position-relative border-radius-lg overflow-hidden">
+  <main class=" main-content position-relative border-radius-lg overflow-hidden">
     <!-- Navbar -->
     <nav
-      class="navbar navbar-main navbar-expand-lg py-1 px-0 m-2 shadow-none border-radius-xl position-sticky bg-white left-auto top-2 z-index-sticky bg-gradient-dark"
+      class=" hideInMobile navbar navbar-main navbar-expand-lg py-1 px-0 m-2 shadow-none border-radius-xl position-sticky bg-white left-auto top-2 z-index-sticky bg-gradient-dark"
       id="navbarBlur" data-scroll="false">
       <div class="container-fluid px-3">
         <div class="navbar-nav navContent">
@@ -187,7 +189,17 @@
       </div>
     </nav>
     <!-- End Navbar -->
-    <div class="mainContainer container-fluid  border-radius-xl p-2">
+    <div class="userInfoHome d-none showInMobile">
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="nameAndImg d-flex align-items-center">
+          <img class="" src="imgs/team-3.jpg">
+          <h4>عمر عبدالعزيز</h4>
+      </div>
+      <a href="" class="nav-link text-white p-0">
+      <i class="fa fa-bell cursor-pointer" style="font-size: 20px;"></i>
+    </a>
+    </div>
+    <div class="max mainContainer container-fluid  border-radius-xl p-2">
       <div class="card shadow-lg">
         <div class="card-body p-3">
           <div class="row gx-4">
@@ -312,7 +324,8 @@
                         class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
                   </div>
                   <div class="text-center mt-2">
-                    <a class="btn bgMain mb-0 px-0 py-2 WhiteColor w-60" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <a class="btn bgMain mb-0 px-0 py-2 WhiteColor w-60" data-bs-toggle="modal"
+                      data-bs-target="#exampleModal">
                       <!-- <i class="fas fa-pencil-alt text-dark ms-2 WhiteColor" aria-hidden="true"></i> -->
                       تقديم</a>
                   </div>
@@ -323,7 +336,8 @@
               <div class="nav nav-tabs nav nav-pills nav-fill p-1 flex-row bgGray justify-content-between">
                 <div class="numOfPage d-flex align-content-center gap-2">
                   <span class="text-dark">عدد العناصر:</span>
-                  <select class="customSelect form-select form-select-sm w-auto pe-4 ps-2 " aria-label="Small select example">
+                  <select class="customSelect form-select form-select-sm w-auto pe-4 ps-2 "
+                    aria-label="Small select example">
                     <option value="1">10</option>
                     <option value="2">20</option>
                     <option value="3">30</option>
@@ -363,10 +377,10 @@
                         class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
                   </div>
                   <div class="text-center mt-2">
-                    <a class="btn bgMain mb-0 px-0 py-2 WhiteColor w-60">
+                    <a class="btn bgMain mb-0 px-0 py-2 WhiteColor w-60" data-bs-toggle="modal" data-bs-target="#InfoModal">
                       <!-- <i class="fas fa-pencil-alt text-dark ms-2 WhiteColor" aria-hidden="true"></i> -->
-                        عرض التفاصيل</a>
-                    <a class="btn btn-outline-danger mb-0 px-0 py-2 text-danger w-35"><i class="far fa-trash-alt ms-2"
+                      عرض التفاصيل</a>
+                    <a class="btn btn-outline-danger mb-0 px-0 py-2 text-danger w-35" id="confirmDelete"><i class="far fa-trash-alt ms-2"
                         aria-hidden="true"></i>حذف</a>
                   </div>
                 </div>
@@ -385,7 +399,7 @@
                   <div class="text-center mt-2">
                     <a class="btn bgMain mb-0 px-0 py-2 WhiteColor w-60">
                       <!-- <i class="fas fa-pencil-alt text-dark ms-2 WhiteColor" aria-hidden="true"></i> -->
-                        عرض التفاصيل</a>
+                      عرض التفاصيل</a>
                     <a class="btn btn-outline-danger mb-0 px-0 py-2 text-danger w-35"><i class="far fa-trash-alt ms-2"
                         aria-hidden="true"></i>حذف</a>
                   </div>
@@ -405,7 +419,7 @@
                   <div class="text-center mt-2">
                     <a class="btn bgMain mb-0 px-0 py-2 WhiteColor w-60">
                       <!-- <i class="fas fa-pencil-alt text-dark ms-2 WhiteColor" aria-hidden="true"></i> -->
-                        عرض التفاصيل</a>
+                      عرض التفاصيل</a>
                     <a class="btn btn-outline-danger mb-0 px-0 py-2 text-danger w-35"><i class="far fa-trash-alt ms-2"
                         aria-hidden="true"></i>حذف</a>
                   </div>
@@ -416,7 +430,8 @@
               <div class="nav nav-tabs nav nav-pills nav-fill p-1 flex-row bgGray justify-content-between">
                 <div class="numOfPage d-flex align-content-center gap-2">
                   <span class="text-dark">عدد العناصر:</span>
-                  <select class="customSelect form-select form-select-sm w-auto pe-4 ps-2 " aria-label="Small select example">
+                  <select class="customSelect form-select form-select-sm w-auto pe-4 ps-2 "
+                    aria-label="Small select example">
                     <option value="1">10</option>
                     <option value="2">20</option>
                     <option value="3">30</option>
@@ -448,12 +463,15 @@
                 <div class="cardInfoHomePage bgGray bg-gray-100 mb-2 p-3 position-relative green">
                   <span class="titleOfcardInfoHomePage">معتمد</span>
                   <div class="d-flex flex-column">
-                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
-                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
-                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
+                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span
+                        class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
+                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span
+                        class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
+                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span
+                        class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
                   </div>
                   <div class="text-center mt-2">
-                    <a class="btn bgMain mb-0 px-0 py-2 WhiteColor w-60">
+                    <a class="btn bgMain mb-0 px-0 py-2 WhiteColor w-60"  data-bs-toggle="modal" data-bs-target="#oldModal">
                       <!-- <i class="fas fa-pencil-alt text-dark ms-2 WhiteColor" aria-hidden="true"></i> -->
                       عرض التفاصيل</a>
                     <a class="btn btn-outline-main mb-0 px-0 py-2 w-35">
@@ -467,9 +485,12 @@
                   <span class="titleOfcardInfoHomePage">مرفوض</span>
 
                   <div class="d-flex flex-column">
-                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
-                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
-                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
+                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span
+                        class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
+                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span
+                        class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
+                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span
+                        class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
                   </div>
                   <div class="text-center mt-2">
                     <a class="btn bgMain mb-0 px-0 py-2 WhiteColor w-60">
@@ -486,7 +507,8 @@
               <div class="nav nav-tabs nav nav-pills nav-fill p-1 flex-row bgGray justify-content-between">
                 <div class="numOfPage d-flex align-content-center gap-2">
                   <span class="text-dark">عدد العناصر:</span>
-                  <select class="customSelect form-select form-select-sm w-auto pe-4 ps-2 " aria-label="Small select example">
+                  <select class="customSelect form-select form-select-sm w-auto pe-4 ps-2 "
+                    aria-label="Small select example">
                     <option value="1">10</option>
                     <option value="2">20</option>
                     <option value="3">30</option>
@@ -512,32 +534,179 @@
               </div>
             </div>
           </div>
-          </div>
         </div>
       </div>
     </div>
+    </div>
   </main>
-<!-- Modal -->
-<!-- Modal -->
-<div class="modal fade modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- Modal -->
+  <div class="modal fade modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">تفاصيل الطلب <span>رقم (2000)</span></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12 col-md">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">اسم الخدمة</label>
+                <select class="form-select customSelect" aria-label="Default select example">
+                  <option value="1"></option>
+                  <option value="2"></option>
+                  <option value="3"></option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12 col-md">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">اسم الوحدة</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="اختر اسم الوحدة">
+              </div>
+            </div>
+            <div class="col-12 col-md">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">تاريخ التقديم</label>
+                <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="تاريخ التقديم">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <label for="exampleFormControlInput1" class="form-label">صورة الجواز الصحي من تطبيق توكلنا</label>
+            <div class="col">
+            <label for="file" class="uploadFile"><span><svg xml:space="preserve" viewBox="0 0 184.69 184.69"
+                  xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="Capa_1"
+                  version="1.1" width="60px" height="60px">
+                  <g>
+                    <g>
+                      <g>
+                        <path d="M149.968,50.186c-8.017-14.308-23.796-22.515-40.717-19.813
+				C102.609,16.43,88.713,7.576,73.087,7.576c-22.117,0-40.112,17.994-40.112,40.115c0,0.913,0.036,1.854,0.118,2.834
+				C14.004,54.875,0,72.11,0,91.959c0,23.456,19.082,42.535,42.538,42.535h33.623v-7.025H42.538
+				c-19.583,0-35.509-15.929-35.509-35.509c0-17.526,13.084-32.621,30.442-35.105c0.931-0.132,1.768-0.633,2.326-1.392
+				c0.555-0.755,0.795-1.704,0.644-2.63c-0.297-1.904-0.447-3.582-0.447-5.139c0-18.249,14.852-33.094,33.094-33.094
+				c13.703,0,25.789,8.26,30.803,21.04c0.63,1.621,2.351,2.534,4.058,2.14c15.425-3.568,29.919,3.883,36.604,17.168
+				c0.508,1.027,1.503,1.736,2.641,1.897c17.368,2.473,30.481,17.569,30.481,35.112c0,19.58-15.937,35.509-35.52,35.509H97.391
+				v7.025h44.761c23.459,0,42.538-19.079,42.538-42.535C184.69,71.545,169.884,53.901,149.968,50.186z"
+                          style="fill:#010002;"></path>
+                      </g>
+                      <g>
+                        <path d="M108.586,90.201c1.406-1.403,1.406-3.672,0-5.075L88.541,65.078
+				c-0.701-0.698-1.614-1.045-2.534-1.045l-0.064,0.011c-0.018,0-0.036-0.011-0.054-0.011c-0.931,0-1.85,0.361-2.534,1.045
+				L63.31,85.127c-1.403,1.403-1.403,3.672,0,5.075c1.403,1.406,3.672,1.406,5.075,0L82.296,76.29v97.227
+				c0,1.99,1.603,3.597,3.593,3.597c1.979,0,3.59-1.607,3.59-3.597V76.165l14.033,14.036
+				C104.91,91.608,107.183,91.608,108.586,90.201z" style="fill:#010002;"></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg></span>
+              <p>اسحب وافلت او انقر لرفع ملف</p>
+            </label>
+            <input class="uploadInput" name="text" id="file" type="file" />
+          </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="submitOrder">حفظ</button>
+          <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">الغاء</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <!-- tap tow Modal -->
+  <div class="modal fade modal-lg" id="InfoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">تفاصيل الطلب <span>رقم (2000)</span></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12 col-md">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">اسم الخدمة</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+
+              </div>
+            </div>
+            <div class="col-12 col-md">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">تاريخ تقديم الخدمة</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+            </div>
+            <div class="col-12 col-md">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">خط السير</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">حفظ</button>
+          <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">الغاء</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+   <!-- الطلبات السابقة -->
+     <!-- old info Modal -->
+  <div class="modal fade modal-lg" id="oldModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">تفاصيل الطلب <span>رقم (2000)</span></h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+        <div class="row">
+          <div class="col-12 col-md">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">اسم الخدمة</label>
+              <select class="form-select customSelect" aria-label="Default select example">
+                <option value="1"></option>
+                <option value="2"></option>
+                <option value="3"></option>
+              </select>
+            </div>
+          </div>
+          <div class="col-12 col-md">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">اسم الوحدة</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+            </div>
+          </div>
+          <div class="col-12 col-md">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">المبلغ المعتمد</label>
+              <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="">
+            </div>
+          </div>
+        </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn bg-gradient-primary">Save changes</button>
+        <button type="button" class="btn btn-primary">حفظ</button>
+        <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">الغاء</button>
       </div>
     </div>
   </div>
 </div>
+<!-- Modal -->
   <!--   Core JS Files   -->
 
   <script src="js/jquery.min.js"></script>
@@ -558,6 +727,55 @@
       Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
     }
   </script>
+
+  <!-- sweetalert2 -->
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+      <script>
+        document.getElementById('confirmDelete').onclick = function() {
+            Swal.fire({
+                title: 'هل أنت متأكد من الحذف؟',
+                text: 'هذا النص هو مثال نص تجريبي يمكن أن يستبدل في نفس المساحة. لقد تم توليد هذا النص من مولد النص العربي.',
+                icon: 'warning',
+                showCancelButton: true,
+                customClass: {
+                    confirmButton: 'btn btn-danger w-100',
+                    cancelButton: 'btn btn-outline-danger bg-body w-100'
+                },
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'حذف',
+                cancelButtonText: 'إلغاء'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                        'تم الحذف!',
+                        'لقد تم حذف العنصر بنجاح.',
+                        'success'
+                    );
+                }
+            });
+        };
+    
+        document.getElementById('submitOrder').onclick = function() {
+        // إغلاق الـ Modal
+        const modal = bootstrap.Modal.getInstance(document.getElementById('exampleModal'));
+        modal.hide();
+
+        // تشغيل SweetAlert2
+        Swal.fire({
+            title: 'تم تقديم الطلب بنجاح!',
+            text: 'رقم الطلب (1543)\nتم قبول طلبكم وسيتم دراسته خلال 5 أيام عمل، كما يمكنكم متابعة حالة الطلب في صفحة متابعة الطلبات.',
+            icon: 'success',
+            showCancelButton: true,
+            confirmButtonText: 'تقديم طلب آخر',
+            cancelButtonText:'شكرا',
+            customClass: {
+                confirmButton: 'btn btn-primary w-100',
+                cancelButton: 'btn btn-outline-primary w-100'
+            }
+        })
+    };
+    </script>
   <script src="js/argon-dashboard.min.js"></script>
 </body>
 
