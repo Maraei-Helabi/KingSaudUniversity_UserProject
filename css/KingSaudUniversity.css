@@ -85,7 +85,7 @@ body{
 /* asid bar */
 .sidenav{
 
-    z-index: 3 !important;
+    z-index: 10000 !important;
 }
 .sidenav .sidenav-header{
     height: 67px;
@@ -340,7 +340,52 @@ btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):no
   
 /* modal */
 
-
+/* s bottom bar */
+/* From Uiverse.io by akshat-patel28 */ 
+.BottomBarContainer {
+    display: flex;
+    background-color: var(--main-color);
+    width: 95%;
+    margin-right: 2.5%;
+    height: 75px;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 18%) 0px 5px 7px 3px, rgb(27 133 219 / 34%) 2px 2px 20px 3px;
+    position: fixed;
+    bottom: 5px;
+    z-index: 100000;
+}
+  
+.buttonPage {
+    outline: 0 !important;
+    border: 0 !important;
+    width: 30%;
+    height: 60px;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+  
+  .buttonPage:hover {
+    transform: translateY(-3px);
+  }
+  
+  .buttonPage .icon {
+    font-size: 35px;
+  }
+  .buttonPage .title {
+    font-size: 12px;
+  }
+  
+/* e bottom bar */
 
 
 
@@ -366,18 +411,24 @@ btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):no
         border-radius: 50%;
     }
     .hideInMobile{
-        display: none;
+        display: none !important;
     }
     .showInMobile{
         display: block !important;
     }
     .showInMobileFlex{
-        display: flex;
+        display: flex !important;
     }
     .mainContainer.max {
         margin: 0;
         width: 100%;
-        /* background: var(--main-color); */
+        min-height: calc(100vh - 82px);
+    }
+    .main-content {
+        background: var(--main-color);
+    }
+    .nav.nav-pills .nav-link{
+        font-size: 14px;
     }
 }
 @media (min-width: 480px) {
