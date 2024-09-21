@@ -1,6 +1,7 @@
 :root{
     --nav-background-color: #1182BD;
     --main-color: #1182BD;
+    --main50-color: #C5DFED;
     --white-color: #FFFFFF;
     --gary-color: #F8F8F8;
 
@@ -40,9 +41,14 @@
     --bs-gradient: none;
 }
 body{
-    font-family:'Tajawal' !important;
+    /* font-family:'Tajawal' !important; */
+    font-family:"Tajawal", sans-serif !important;
 }
-
+.card .card-body {
+    /* font-family: "Open Sans", sans-serif; */
+    padding: 1.5rem;
+    font-family: "Tajawal", sans-serif !important;
+}
 .sidebar{
     padding: 0px;
 }
@@ -404,7 +410,12 @@ btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):no
     background: var(--main-color);
 }
 /* e violations */
-
+/* dataCard */
+.dataCard{}
+.dataCard .card-header{
+    background: var(--main50-color);
+}
+/*  */
 
 
 
