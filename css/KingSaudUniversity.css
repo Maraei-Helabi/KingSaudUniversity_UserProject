@@ -233,6 +233,9 @@ body{
 {
     color: var(--white-color);
 }
+.paginationConrainer .nav.nav-tabs.nav.nav-pills.nav-fill.p-1.flex-row.bgGray.justify-content-between {
+    gap: 8px;
+}
 .customSelect::after {
     content: '\25BC'; /* رمز السهم */
     position: absolute;
