@@ -53,7 +53,7 @@ body{
     top: 0px !important;
     width: calc(100% - 18.125rem);
     background: var(--nav-background-color) !important;
-    z-index: 2 9 !important;
+    z-index: 10 !important;
 }
 
 .navbar.navbar-main img {
@@ -85,7 +85,7 @@ body{
 /* asid bar */
 .sidenav{
 
-    z-index: 10000 !important;
+    z-index: 100 !important;
 }
 .sidenav .sidenav-header{
     height: 67px;
@@ -386,6 +386,21 @@ btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):no
   }
   
 /* e bottom bar */
+/* degrees page */
+.imgDegreeContainer{
+    width: 182px;
+    height: 132px;
+}
+/* e degrees page */
+/* s violations */
+.cardInfoHomePage.noHover:hover {
+    border: none !important;
+}
+.form-check-input:checked[type="checkbox"] {
+    /* background-image: linear-gradient(310deg, #5e72e4 0%, #825ee4 100%); */
+    background: var(--main-color);
+}
+/* e violations */
 
 
 
@@ -399,9 +414,11 @@ btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):no
 
 
 
-
-
-
+@media (min-width: 1200px) {
+    .sidenav.fixed-end > .main-content {
+        margin-right: 17.125rem;
+    }
+}
 
 /* mobile responsive */
 @media (max-width: 480px) {
