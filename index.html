@@ -1,771 +1,987 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png"> -->
+  <title>
+    KingSaudUniversity_UserProject
+  </title>
+  <!--     Fonts and icons     -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+    rel="stylesheet">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <link href="css/all.min.css" rel="stylesheet" type="text/css">
+  <!-- sweetalert2 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
-    <title>KingSaudUniversity_UserProject</title>
-
-    <!-- Custom fonts for this template-->
-    <link href="css/all.min.css" rel="stylesheet" type="text/css">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
-    <!-- <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet"> -->
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
-    <link href="css/KingSaudUniversity.css" rel="stylesheet">
-
-
+  <!-- CSS Files -->
+  <link id="pagestyle" href="css/argon-dashboard.css" rel="stylesheet" />
+  <link href="css/KingSaudUniversity.css" rel="stylesheet">
 </head>
 
-<body id="page-top" dir="rtl">
-
-    <!-- Page Wrapper -->
-    <div id="wrapper">
-
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
-            </a>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Interface
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Addons
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
-            <!-- Sidebar Message -->
-            <div class="sidebar-card d-none d-lg-flex">
-                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
-                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
-            </div>
-
-        </ul>
-        <!-- End of Sidebar -->
-
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
-
-            <!-- Main Content -->
-            <div id="content">
-
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
-                            </a>
-                            <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Alerts Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Messages -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-envelope fa-fw"></i>
-                                <!-- Counter - Messages -->
-                                <span class="badge badge-danger badge-counter">7</span>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="messagesDropdown">
-                                <h6 class="dropdown-header">
-                                    Message Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                                            alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
-                                            problem I've been having.</div>
-                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
-                                            alt="...">
-                                        <div class="status-indicator"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">I have the photos that you ordered last month, how
-                                            would you like them sent to you?</div>
-                                        <div class="small text-gray-500">Jae Chun · 1d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
-                                            alt="...">
-                                        <div class="status-indicator bg-warning"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Last month's report looks great, I am very happy with
-                                            the progress so far, keep up the good work!</div>
-                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                                            alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
-                                            told me that people say this to all dogs, even if they aren't good...</div>
-                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-                            </div>
-                        </li>
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
-
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
-                        </li>
-
-                    </ul>
-
-                </nav>
-                <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-                    </div>
-
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Earnings (Monthly)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Earnings (Annual)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Earnings (Monthly) Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks
-                                            </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="progress progress-sm mr-2">
-                                                        <div class="progress-bar bg-info" role="progressbar"
-                                                            style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pending Requests Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Pending Requests</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Content Row -->
-
-                    <div class="row">
-
-                        <!-- Area Chart -->
-                        <div class="col-xl-8 col-lg-7">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-area">
-                                        <canvas id="myAreaChart"></canvas>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pie Chart -->
-                        <div class="col-xl-4 col-lg-5">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
-                                    <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <canvas id="myPieChart"></canvas>
-                                    </div>
-                                    <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-primary"></i> Direct
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-success"></i> Social
-                                        </span>
-                                        <span class="mr-2">
-                                            <i class="fas fa-circle text-info"></i> Referral
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Content Column -->
-                        <div class="col-lg-6 mb-4">
-
-                            <!-- Project Card Example -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="small font-weight-bold">Server Migration <span
-                                            class="float-right">20%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%"
-                                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Sales Tracking <span
-                                            class="float-right">40%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%"
-                                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Customer Database <span
-                                            class="float-right">60%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar" role="progressbar" style="width: 60%"
-                                            aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Payout Details <span
-                                            class="float-right">80%</span></h4>
-                                    <div class="progress mb-4">
-                                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%"
-                                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Account Setup <span
-                                            class="float-right">Complete!</span></h4>
-                                    <div class="progress">
-                                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
-                                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Color System -->
-                            <div class="row">
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-primary text-white shadow">
-                                        <div class="card-body">
-                                            Primary
-                                            <div class="text-white-50 small">#4e73df</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-success text-white shadow">
-                                        <div class="card-body">
-                                            Success
-                                            <div class="text-white-50 small">#1cc88a</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-info text-white shadow">
-                                        <div class="card-body">
-                                            Info
-                                            <div class="text-white-50 small">#36b9cc</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-warning text-white shadow">
-                                        <div class="card-body">
-                                            Warning
-                                            <div class="text-white-50 small">#f6c23e</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-danger text-white shadow">
-                                        <div class="card-body">
-                                            Danger
-                                            <div class="text-white-50 small">#e74a3b</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-secondary text-white shadow">
-                                        <div class="card-body">
-                                            Secondary
-                                            <div class="text-white-50 small">#858796</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-light text-black shadow">
-                                        <div class="card-body">
-                                            Light
-                                            <div class="text-black-50 small">#f8f9fc</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-dark text-white shadow">
-                                        <div class="card-body">
-                                            Dark
-                                            <div class="text-white-50 small">#5a5c69</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="col-lg-6 mb-4">
-
-                            <!-- Illustrations -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
-                                </div>
-                                <div class="card-body">
-                                    <div class="text-center">
-                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
-                                            src="img/undraw_posting_photo.svg" alt="...">
-                                    </div>
-                                    <p>Add some quality, svg illustrations to your project courtesy of <a
-                                            target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a
-                                        constantly updated collection of beautiful svg images that you can use
-                                        completely free and without attribution!</p>
-                                    <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on
-                                        unDraw &rarr;</a>
-                                </div>
-                            </div>
-
-                            <!-- Approach -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
-                                </div>
-                                <div class="card-body">
-                                    <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce
-                                        CSS bloat and poor page performance. Custom CSS classes are used to create
-                                        custom components and custom utility classes.</p>
-                                    <p class="mb-0">Before working with this theme, you should become familiar with the
-                                        Bootstrap framework, especially the utility classes.</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-                <!-- /.container-fluid -->
-
-            </div>
-            <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
-
-        </div>
-        <!-- End of Content Wrapper -->
-
+<body class="g-sidenav-show rtl  bg-gray-100">
+  <!-- يعمل باك قراون ازرق -->
+  <!-- <div class="min-height-300 bg-primary position-absolute w-100"></div> -->
+  <aside
+    class="hideInMobile sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-2 fixed-end me-4 rotate-caret align-content-between d-flex"
+    id="sidenav-main">
+    <div class="sidenav-header w-100">
+      <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute start-0 top-0 d-none d-xl-none"
+        aria-hidden="true" id="iconSidenav"></i>
+      <a class="navbar-brand m-0 p-0 h-100" href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html "
+        target="_blank">
+        <img src="imgs/جامعة الملك سعود (1).png" class="navbar-brand-img h-100 w-100 max-height-100" alt="main_logo">
+      </a>
     </div>
-    <!-- End of Page Wrapper -->
+    <hr class="horizontal dark mt-0">
+    <div class="collapse navbar-collapse px-0 w-auto " id="sidenav-collapse-main">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="../pages/dashboard.html">
+            <div
+              class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+              <i class="fa-solid fa-house-user"></i>
+            </div>
+            <span class="nav-link-text me-1">الرئيسية</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="../pages/tables.html">
+            <div
+              class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+              <i class="fa-solid fa-chart-column"></i>
+            </div>
+            <span class="nav-link-text me-1">البيانات</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="../pages/billing.html">
+            <div
+              class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+              <i class="fa-solid fa-newspaper"></i>
+            </div>
+            <span class="nav-link-text me-1">الشهادات</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="sidenav-footer mx-3 w-100">
+      <a href="" class="btn btn-reddit mb-3 w-100">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        <span class="me-1">تسجيل خروج</span>
+      </a>
+    </div>
+  </aside>
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
+
+  <main class=" main-content position-relative border-radius-lg overflow-hidden">
+    <!-- Navbar -->
+    <nav
+      class=" hideInMobile navbar navbar-main navbar-expand-lg py-1 px-0 m-2 shadow-none border-radius-xl position-sticky bg-white left-auto top-2 z-index-sticky bg-gradient-dark"
+      id="navbarBlur" data-scroll="false">
+      <div class="container-fluid px-3">
+        <div class="navbar-nav navContent">
+          <div class="nav-item d-xl-none pe-3 d-flex align-items-center">
+            <a href="javascript:;" class="nav-link text-white p-0" id="iconNavbarSidenav">
+              <div class="sidenav-toggler-inner">
+                <i class="sidenav-toggler-line bg-white"></i>
+                <i class="sidenav-toggler-line bg-white"></i>
+                <i class="sidenav-toggler-line bg-white"></i>
+              </div>
+            </a>
+          </div>
+          <img class="d-xl-none d-block" src="imgs/KSU-300-.png">
+          <div class="align-items-center d-flex gap-4">
+            <div class="nav-item dropdown pt-1 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-white p-0" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="fa fa-bell cursor-pointer" style="font-size: 20px;"></i>
+              </a>
+              <ul class="dropdown-menu  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
+                <li class="mb-2">
+                  <a class="dropdown-item border-radius-md" href="javascript:;">
+                    <div class="d-flex py-1">
+                      <div class="my-auto">
+                        <img src="../assets/img/team-2.jpg" class="avatar avatar-sm  ms-3 ">
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="text-sm font-weight-normal mb-1">
+                          <span class="font-weight-bold">New message</span> from Laur
+                        </h6>
+                        <p class="text-xs text-secondary mb-0">
+                          <i class="fa fa-clock me-1"></i>
+                          13 minutes ago
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a class="dropdown-item border-radius-md" href="javascript:;">
+                    <div class="d-flex py-1">
+                      <div class="my-auto">
+                        <img src="../assets/img/small-logos/logo-spotify.svg"
+                          class="avatar avatar-sm bg-gradient-dark  ms-3 ">
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="text-sm font-weight-normal mb-1">
+                          <span class="font-weight-bold">New album</span> by Travis Scott
+                        </h6>
+                        <p class="text-xs text-secondary mb-0">
+                          <i class="fa fa-clock me-1"></i>
+                          1 day
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item border-radius-md" href="javascript:;">
+                    <div class="d-flex py-1">
+                      <div class="avatar avatar-sm bg-gradient-secondary  ms-3  my-auto">
+                        <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1"
+                          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <title>credit-card</title>
+                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                              <g transform="translate(1716.000000, 291.000000)">
+                                <g transform="translate(453.000000, 454.000000)">
+                                  <path class="color-background"
+                                    d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z"
+                                    opacity="0.593633743"></path>
+                                  <path class="color-background"
+                                    d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z">
+                                  </path>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </svg>
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="text-sm font-weight-normal mb-1">
+                          Payment successfully completed
+                        </h6>
+                        <p class="text-xs text-secondary mb-0">
+                          <i class="fa fa-clock me-1"></i>
+                          2 days
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-item d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-white font-weight-bold px-0">
+                <!-- <i class="fa fa-user me-sm-1"></i> -->
+                <img src="imgs/team-3.jpg" class="userAvatar avatar avatar-sm m-0 ms-1">
+                <span class="d-sm-inline d-none">عمر عبدالعزيز</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <div class="userInfoHome d-none showInMobile p-3">
+      <div class="d-flex align-items-center justify-content-between">
+        <div class="nameAndImg d-flex align-items-center">
+          <img class="" src="imgs/team-3.jpg">
+          <h4 class="text-white">عمر عبدالعزيز</h4>
+        </div>
+        <a href="javascript:;" class="nav-link text-white p-0" id="dropdownMenuButton2" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          <i class="fa fa-bell cursor-pointer" style="font-size: 20px;"></i>
+        </a>
+        <ul class="dropdown-menu  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton2">
+          <li class="mb-2">
+            <a class="dropdown-item border-radius-md" href="javascript:;">
+              <div class="d-flex py-1">
+                <div class="my-auto">
+                  <img src="../assets/img/team-2.jpg" class="avatar avatar-sm  ms-3 ">
+                </div>
+                <div class="d-flex flex-column justify-content-center">
+                  <h6 class="text-sm font-weight-normal mb-1">
+                    <span class="font-weight-bold">New message</span> from Laur
+                  </h6>
+                  <p class="text-xs text-secondary mb-0">
+                    <i class="fa fa-clock me-1"></i>
+                    13 minutes ago
+                  </p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="mb-2">
+            <a class="dropdown-item border-radius-md" href="javascript:;">
+              <div class="d-flex py-1">
+                <div class="my-auto">
+                  <img src="../assets/img/small-logos/logo-spotify.svg"
+                    class="avatar avatar-sm bg-gradient-dark  ms-3 ">
+                </div>
+                <div class="d-flex flex-column justify-content-center">
+                  <h6 class="text-sm font-weight-normal mb-1">
+                    <span class="font-weight-bold">New album</span> by Travis Scott
+                  </h6>
+                  <p class="text-xs text-secondary mb-0">
+                    <i class="fa fa-clock me-1"></i>
+                    1 day
+                  </p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item border-radius-md" href="javascript:;">
+              <div class="d-flex py-1">
+                <div class="avatar avatar-sm bg-gradient-secondary  ms-3  my-auto">
+                  <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <title>credit-card</title>
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                        <g transform="translate(1716.000000, 291.000000)">
+                          <g transform="translate(453.000000, 454.000000)">
+                            <path class="color-background"
+                              d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z"
+                              opacity="0.593633743"></path>
+                            <path class="color-background"
+                              d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z">
+                            </path>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <div class="d-flex flex-column justify-content-center">
+                  <h6 class="text-sm font-weight-normal mb-1">
+                    Payment successfully completed
+                  </h6>
+                  <p class="text-xs text-secondary mb-0">
+                    <i class="fa fa-clock me-1"></i>
+                    2 days
+                  </p>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="max mainContainer container-fluid  border-radius-xl p-2">
+      <div class="card shadow-lg hideInMobile">
+        <div class="card-body p-3">
+          <div class="row gx-4">
+            <div class="col-auto">
+              <div class="avatar avatar-xl position-relative">
+                <img src="imgs/team-3.jpg" alt="profile_image" class="w-100 border-radius-lg shadow-sm">
+              </div>
+            </div>
+            <div class="col-auto my-auto">
+              <div class="h-100">
+                <h5 class="mb-1">
+                  عمر عبدالعزيز
+                </h5>
+                <!-- <p class="mb-0 font-weight-bold text-sm">
+                  Public Relations
+                </p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row p-3">
+          <div class="col borderBetween">
+            <div class="d-flex align-content-center justify-content-between mb-2">
+              <h6 class="mb-1">
+                الكلية
+              </h6>
+              <p class="mb-0 font-weight-bold text-sm">
+                الحاسبات
+              </p>
+            </div>
+            <div class="d-flex align-content-center justify-content-between mb-2">
+              <h6 class="mb-1">
+                التخصص
+              </h6>
+              <p class="mb-0 font-weight-bold text-sm">
+                تقنية المعلومات
+              </p>
+            </div>
+          </div>
+          <div class="col borderBetween">
+            <div class="d-flex align-content-center justify-content-between mb-2">
+              <h6 class="mb-1">
+                رقم الإقامة
+              </h6>
+              <p class="mb-0 font-weight-bold text-sm">
+                00110022000
+              </p>
+            </div>
+            <div class="d-flex align-content-center justify-content-between mb-2">
+              <h6 class="mb-1">
+                الرقم الجامعي
+              </h6>
+              <p class="mb-0 font-weight-bold text-sm">
+                12330083333
+              </p>
+            </div>
+          </div>
+          <div class="col borderBetween">
+            <div class="d-flex align-content-center justify-content-between mb-2">
+              <h6 class="mb-1">
+                الكلية
+              </h6>
+              <p class="mb-0 font-weight-bold text-sm">
+                الحاسبات
+              </p>
+            </div>
+            <div class="d-flex align-content-center justify-content-between mb-2">
+              <h6 class="mb-1">
+                التخصص
+              </h6>
+              <p class="mb-0 font-weight-bold text-sm">
+                تقنية المعلومات
+              </p>
+            </div>
+          </div>
+          <div class="col borderBetween">
+            <div class="d-flex align-content-center justify-content-between mb-2">
+              <h6 class="mb-1">
+                رقم الإقامة
+              </h6>
+              <p class="mb-0 font-weight-bold text-sm">
+                00110022000
+              </p>
+            </div>
+            <div class="d-flex align-content-center justify-content-between mb-2">
+              <h6 class="mb-1">
+                الرقم الجامعي
+              </h6>
+              <p class="mb-0 font-weight-bold text-sm">
+                12330083333
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card tabsCard p-2 mt-4 mv-2">
+        <ul class="nav nav-tabs nav nav-pills nav-fill p-1 flex-row bgGray" role="tablist">
+          <li class="nav-item mx-1" role="presentation">
+            <a class="nav-link active" id="simple-tab-0" data-bs-toggle="tab" href="#simple-tabpanel-0" role="tab"
+              aria-controls="simple-tabpanel-0" aria-selected="true">الطلبات المتاحة</a>
+          </li>
+          <li class="nav-item mx-1" role="presentation">
+            <a class="nav-link" id="simple-tab-1" data-bs-toggle="tab" href="#simple-tabpanel-1" role="tab"
+              aria-controls="simple-tabpanel-1" aria-selected="false">متابعة الطلبات</a>
+          </li>
+          <li class="nav-item mx-1" role="presentation">
+            <a class="nav-link" id="simple-tab-2" data-bs-toggle="tab" href="#simple-tabpanel-2" role="tab"
+              aria-controls="simple-tabpanel-2" aria-selected="false">الطلبات السابقة</a>
+          </li>
+        </ul>
+        <div class="tab-content mt-4" id="tab-content">
+          <div class="tab-pane active" id="simple-tabpanel-0" role="tabpanel" aria-labelledby="simple-tab-0">
+            <div class="row">
+              <div class="col-12 col-md-4 col-sm-6">
+                <div class="cardInfoHomePage bgGray bg-gray-100 mb-2 p-3 position-relative">
+                  <div class="d-flex flex-column">
+                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span
+                        class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
+                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span
+                        class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
+                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span
+                        class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
+                  </div>
+                  <div class="text-center mt-2">
+                    <a class="btn bgMain mb-0 px-0 py-2 WhiteColor w-60" data-bs-toggle="modal"
+                      data-bs-target="#exampleModal">
+                      <!-- <i class="fas fa-pencil-alt text-dark ms-2 WhiteColor" aria-hidden="true"></i> -->
+                      تقديم</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="paginationConrainer">
+              <div class="nav nav-tabs nav nav-pills nav-fill p-1 flex-row bgGray justify-content-between">
+                <div class="numOfPage d-flex align-content-center gap-2">
+                  <span class="text-dark">عدد العناصر:</span>
+                  <select class="customSelect form-select form-select-sm w-auto pe-4 ps-2 "
+                    aria-label="Small select example">
+                    <option value="1">10</option>
+                    <option value="2">20</option>
+                    <option value="3">30</option>
+                  </select>
+                </div>
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination mb-0">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="simple-tabpanel-1" role="tabpanel" aria-labelledby="simple-tab-1">
+            <div class="filteringContiner row p-2 mb-3">
+              <div class="col-12 col-md-8 col-lg-9 mb-2 mb-md-0">
+                  <div class="input-group">
+                      <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+                      <input class="form-control" placeholder="بحث" type="text">
+                  </div>
+              </div>
+              <div class="col-12 col-md-4 col-lg-3">
+                  <div class="d-flex gap-5 d-md-block">
+                      <button type="button" class="btn btn-outline-primary mb-0 w-100" data-bs-toggle="modal"
+                      data-bs-target="#filterModal">
+                          <span>فلترة</span>
+                          <i class="fa-solid fa-filter"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+            <div class="row">
+              <div class="col-12 col-md-4 col-sm-6">
+                <div class="cardInfoHomePage bgGray bg-gray-100 mb-2 p-3 blue position-relative">
+                  <span class="titleOfcardInfoHomePage">تم الارسال</span>
+                  <div class="d-flex flex-column">
+                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span
+                        class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
+                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span
+                        class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
+                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span
+                        class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
+                  </div>
+                  <div class="text-center mt-2">
+                    <a class="btn bgMain mb-0 px-0 py-2 WhiteColor w-60" data-bs-toggle="modal"
+                      data-bs-target="#InfoModal">
+                      <!-- <i class="fas fa-pencil-alt text-dark ms-2 WhiteColor" aria-hidden="true"></i> -->
+                      عرض التفاصيل</a>
+                    <a class="btn btn-outline-danger mb-0 px-0 py-2 text-danger w-35" id="confirmDelete"><i
+                        class="far fa-trash-alt ms-2" aria-hidden="true"></i>حذف</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 col-sm-6">
+                <div class="cardInfoHomePage bgGray bg-gray-100 mb-2 p-3 purple position-relative">
+                  <span class="titleOfcardInfoHomePage">مسترجع</span>
+                  <div class="d-flex flex-column">
+                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span
+                        class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
+                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span
+                        class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
+                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span
+                        class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
+                  </div>
+                  <div class="text-center mt-2">
+                    <a class="btn bgMain mb-0 px-0 py-2 WhiteColor w-60">
+                      <!-- <i class="fas fa-pencil-alt text-dark ms-2 WhiteColor" aria-hidden="true"></i> -->
+                      عرض التفاصيل</a>
+                    <a class="btn btn-outline-danger mb-0 px-0 py-2 text-danger w-35"><i class="far fa-trash-alt ms-2"
+                        aria-hidden="true"></i>حذف</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 col-sm-6">
+                <div class="cardInfoHomePage bgGray bg-gray-100 mb-2 p-3 yellow position-relative">
+                  <span class="titleOfcardInfoHomePage">قيد اللدراسة</span>
+                  <div class="d-flex flex-column">
+                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span
+                        class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
+                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span
+                        class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
+                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span
+                        class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
+                  </div>
+                  <div class="text-center mt-2">
+                    <a class="btn bgMain mb-0 px-0 py-2 WhiteColor w-60">
+                      <!-- <i class="fas fa-pencil-alt text-dark ms-2 WhiteColor" aria-hidden="true"></i> -->
+                      عرض التفاصيل</a>
+                    <a class="btn btn-outline-danger mb-0 px-0 py-2 text-danger w-35"><i class="far fa-trash-alt ms-2"
+                        aria-hidden="true"></i>حذف</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="paginationConrainer">
+              <div class="nav nav-tabs nav nav-pills nav-fill p-1 flex-row bgGray justify-content-between">
+                <div class="numOfPage d-flex align-content-center gap-2">
+                  <span class="text-dark">عدد العناصر:</span>
+                  <select class="customSelect form-select form-select-sm w-auto pe-4 ps-2 "
+                    aria-label="Small select example">
+                    <option value="1">10</option>
+                    <option value="2">20</option>
+                    <option value="3">30</option>
+                  </select>
+                </div>
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination mb-0">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="simple-tabpanel-2" role="tabpanel" aria-labelledby="simple-tab-2">
+            <div class="filteringContiner row p-2 mb-3">
+              <div class="col-12 col-md-8 col-lg-9 mb-2 mb-md-0">
+                  <div class="input-group">
+                      <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+                      <input class="form-control" placeholder="بحث" type="text">
+                  </div>
+              </div>
+              <div class="col-12 col-md-4 col-lg-3">
+                  <div class="d-flex gap-5 d-md-block">
+                      <button type="button" class="btn btn-outline-primary mb-0 w-100" data-bs-toggle="modal"
+                      data-bs-target="#filterModal">
+                          <span>فلترة</span>
+                          <i class="fa-solid fa-filter"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+            <div class="row">
+              <div class="col-12 col-md-4 col-sm-6">
+                <div class="cardInfoHomePage bgGray bg-gray-100 mb-2 p-3 position-relative green">
+                  <span class="titleOfcardInfoHomePage">معتمد</span>
+                  <div class="d-flex flex-column">
+                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span
+                        class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
+                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span
+                        class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
+                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span
+                        class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
+                  </div>
+                  <div class="text-center mt-2">
+                    <a class="btn bgMain mb-0 px-0 py-2 WhiteColor w-60" data-bs-toggle="modal"
+                      data-bs-target="#oldModal">
+                      <!-- <i class="fas fa-pencil-alt text-dark ms-2 WhiteColor" aria-hidden="true"></i> -->
+                      عرض التفاصيل</a>
+                    <a class="btn btn-outline-main mb-0 px-0 py-2 w-35">
+                      <i class="fa-regular fa-star ms-2 text-warning"></i>
+                      تقييم</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-4 col-sm-6">
+                <div class="cardInfoHomePage bgGray bg-gray-100 mb-2 p-3 position-relative red">
+                  <span class="titleOfcardInfoHomePage">مرفوض</span>
+
+                  <div class="d-flex flex-column">
+                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span
+                        class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
+                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span
+                        class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
+                    <span class="mb-2 d-flex font-weight-bold text-dark gap-2"> اسم الوحدة: <span
+                        class="font-weight-normal ms-sm-2">عمرة الخريجين</span></span>
+                  </div>
+                  <div class="text-center mt-2">
+                    <a class="btn bgMain mb-0 px-0 py-2 WhiteColor w-60">
+                      <!-- <i class="fas fa-pencil-alt text-dark ms-2 WhiteColor" aria-hidden="true"></i> -->
+                      عرض التفاصيل</a>
+                    <a class="btn btn-outline-main mb-0 px-0 py-2 w-35">
+                      <i class="fa-regular fa-star ms-2 text-warning"></i>
+                      تقييم</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="paginationConrainer">
+              <div class="nav nav-tabs nav nav-pills nav-fill p-1 flex-row bgGray justify-content-between">
+                <div class="numOfPage d-flex align-content-center gap-2">
+                  <span class="text-dark">عدد العناصر:</span>
+                  <select class="customSelect form-select form-select-sm w-auto pe-4 ps-2 "
+                    aria-label="Small select example">
+                    <option value="1">10</option>
+                    <option value="2">20</option>
+                    <option value="3">30</option>
+                  </select>
+                </div>
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination mb-0">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+
+  <!-- bottom bar -->
+  <div class="BottomBarContainer d-none showInMobileFlex">
+    <a class="buttonPage" href="/index.html">
+      <svg class="icon" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em"
+        width="1em" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M946.5 505L560.1 118.8l-25.9-25.9a31.5 31.5 0 0 0-44.4 0L77.5 505a63.9 63.9 0 0 0-18.8 46c.4 35.2 29.7 63.3 64.9 63.3h42.5V940h691.8V614.3h43.4c17.1 0 33.2-6.7 45.3-18.8a63.6 63.6 0 0 0 18.7-45.3c0-17-6.7-33.1-18.8-45.2zM568 868H456V664h112v204zm217.9-325.7V868H632V640c0-22.1-17.9-40-40-40H432c-22.1 0-40 17.9-40 40v228H238.1V542.3h-96l370-369.7 23.1 23.1L882 542.3h-96.1z">
+        </path>
+      </svg>
+      <span class="tilt">الرئسية</span>
+
     </a>
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
+    <a class="buttonPage" href="/Degrees.html">
+      <i class="fa-regular fa-file-lines icon"></i>
+      <span class="tilt">شهاداتي</span>
+    </a>
+
+    <a class="buttonPage" href="/setting.html">
+      <svg class="icon" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em"
+        width="1em" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M12 2.5a5.5 5.5 0 0 1 3.096 10.047 9.005 9.005 0 0 1 5.9 8.181.75.75 0 1 1-1.499.044 7.5 7.5 0 0 0-14.993 0 .75.75 0 0 1-1.5-.045 9.005 9.005 0 0 1 5.9-8.18A5.5 5.5 0 0 1 12 2.5ZM8 8a4 4 0 1 0 8 0 4 4 0 0 0-8 0Z">
+        </path>
+      </svg>
+      <span class="tilt">الملف الشخصي</span>
+    </a>
+
+  </div>
+  <!-- e bottom bar -->
+
+  <!-- Modal -->
+  <div class="modal fade modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">تفاصيل الطلب <span>رقم (2000)</span></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12 col-md">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">اسم الخدمة</label>
+                <select class="form-select customSelect" aria-label="Default select example">
+                  <option value="1"></option>
+                  <option value="2"></option>
+                  <option value="3"></option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12 col-md">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">اسم الوحدة</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="اختر اسم الوحدة">
+              </div>
+            </div>
+            <div class="col-12 col-md">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">تاريخ التقديم</label>
+                <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="تاريخ التقديم">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <label for="exampleFormControlInput1" class="form-label">صورة الجواز الصحي من تطبيق توكلنا</label>
+            <div class="col">
+              <label for="file" class="uploadFile"><span><svg xml:space="preserve" viewBox="0 0 184.69 184.69"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="Capa_1"
+                    version="1.1" width="60px" height="60px">
+                    <g>
+                      <g>
+                        <g>
+                          <path d="M149.968,50.186c-8.017-14.308-23.796-22.515-40.717-19.813
+				C102.609,16.43,88.713,7.576,73.087,7.576c-22.117,0-40.112,17.994-40.112,40.115c0,0.913,0.036,1.854,0.118,2.834
+				C14.004,54.875,0,72.11,0,91.959c0,23.456,19.082,42.535,42.538,42.535h33.623v-7.025H42.538
+				c-19.583,0-35.509-15.929-35.509-35.509c0-17.526,13.084-32.621,30.442-35.105c0.931-0.132,1.768-0.633,2.326-1.392
+				c0.555-0.755,0.795-1.704,0.644-2.63c-0.297-1.904-0.447-3.582-0.447-5.139c0-18.249,14.852-33.094,33.094-33.094
+				c13.703,0,25.789,8.26,30.803,21.04c0.63,1.621,2.351,2.534,4.058,2.14c15.425-3.568,29.919,3.883,36.604,17.168
+				c0.508,1.027,1.503,1.736,2.641,1.897c17.368,2.473,30.481,17.569,30.481,35.112c0,19.58-15.937,35.509-35.52,35.509H97.391
+				v7.025h44.761c23.459,0,42.538-19.079,42.538-42.535C184.69,71.545,169.884,53.901,149.968,50.186z"
+                            style="fill:#010002;"></path>
+                        </g>
+                        <g>
+                          <path d="M108.586,90.201c1.406-1.403,1.406-3.672,0-5.075L88.541,65.078
+				c-0.701-0.698-1.614-1.045-2.534-1.045l-0.064,0.011c-0.018,0-0.036-0.011-0.054-0.011c-0.931,0-1.85,0.361-2.534,1.045
+				L63.31,85.127c-1.403,1.403-1.403,3.672,0,5.075c1.403,1.406,3.672,1.406,5.075,0L82.296,76.29v97.227
+				c0,1.99,1.603,3.597,3.593,3.597c1.979,0,3.59-1.607,3.59-3.597V76.165l14.033,14.036
+				C104.91,91.608,107.183,91.608,108.586,90.201z" style="fill:#010002;"></path>
+                        </g>
+                      </g>
+                    </g>
+                  </svg></span>
+                <p>اسحب وافلت او انقر لرفع ملف</p>
+              </label>
+              <input class="uploadInput" name="text" id="file" type="file" />
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="submitOrder">حفظ</button>
+          <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">الغاء</button>
+        </div>
+      </div>
     </div>
+  </div>
+  <!-- Modal -->
+  <!-- tap tow Modal -->
+  <div class="modal fade modal-lg" id="InfoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">تفاصيل الطلب <span>رقم (2000)</span></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12 col-md">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">اسم الخدمة</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="js/all.min.js"></script>
+              </div>
+            </div>
+            <div class="col-12 col-md">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">تاريخ تقديم الخدمة</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+            </div>
+            <div class="col-12 col-md">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">خط السير</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+            </div>
+          </div>
 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">حفظ</button>
+          <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">الغاء</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <!-- الطلبات السابقة -->
+  <!-- old info Modal -->
+  <div class="modal fade modal-lg" id="oldModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">تفاصيل الطلب <span>رقم (2000)</span></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-12 col-md">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">اسم الخدمة</label>
+                <select class="form-select customSelect" aria-label="Default select example">
+                  <option value="1"></option>
+                  <option value="2"></option>
+                  <option value="3"></option>
+                </select>
+              </div>
+            </div>
+            <div class="col-12 col-md">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">اسم الوحدة</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+            </div>
+            <div class="col-12 col-md">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">المبلغ المعتمد</label>
+                <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">حفظ</button>
+          <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">الغاء</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+      <!-- filterModal -->
+      <div class="modal fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="filterModalLabel">فلترة النتئج</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <div class="row pb-4 border-bottom-sm">
+                      <div class="col-12">
+                          <label for="exampleFormControlInput1" class="form-label">اختر نوع الطلب</label>
+                          <div class="d-flex align-items-center justify-content-between">
+                              <div class="align-items-end blue cardInfoHomePage d-flex flex-row-reverse form-check noHover p-0">
+                                  <span class="titleOfcardInfoHomePage position-relative me-5 mb-1">تم الارسال</span>
+                                  <input class="form-check-input" type="checkbox" value="" id="fcustomCheck1" checked="">
+                              </div>
+                              <div class="align-items-end purple cardInfoHomePage d-flex flex-row-reverse form-check noHover p-0">
+                                  <span class="titleOfcardInfoHomePage position-relative me-5 mb-1">مسترجع</span>
+                                  <input class="form-check-input" type="checkbox" value="" id="fcustomCheck1" checked="">
+                              </div>
+                              <div class="align-items-end yellow cardInfoHomePage d-flex flex-row-reverse form-check noHover p-0">
+                                  <span class="titleOfcardInfoHomePage position-relative me-5 mb-1">قيد الدراسة</span>
+                                  <input class="form-check-input" type="checkbox" value="" id="fcustomCheck1" checked="">
+                              </div>
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+                          </div>
+                      </div>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+                  </div>
+                  <div class="row mt-4 pb-4 border-bottom-sm">
+                      <div class="col-12">
+                          <label for="exampleFormControlInput1" class="form-label">ترتيب زمني</label>
+                          <div class="d-flex align-items-center gap-5">
+                              <div class="align-items-end blue cardInfoHomePage d-flex flex-row-reverse form-check noHover p-0">
+                                  <span class="titleOfcardInfoHomePage position-relative me-5 mb-1">الاحدث</span>
+                                  <input class="form-check-input" type="checkbox" value="" id="fcustomCheck1" checked="">
+                              </div>
+                              <div class="align-items-end blue cardInfoHomePage d-flex flex-row-reverse form-check noHover p-0">
+                                  <span class="titleOfcardInfoHomePage position-relative me-5 mb-1">الاقدم</span>
+                                  <input class="form-check-input" type="checkbox" value="" id="fcustomCheck1" checked="">
+                              </div>
 
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+                          </div>
+                      </div>
 
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+                  </div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" id="submitOrder">حفظ</button>
+                  <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">الغاء</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- filterModal -->
+  <!--   Core JS Files   -->
 
+  <script src="js/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="js/core/popper.min.js"></script>
+  <script src="js/core/popper.min.js"></script>
+  <script src="js/core/bootstrap.min.js"></script>
+  <script src="js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="js/plugins/smooth-scrollbar.min.js"></script>
+  <script src="js/all.min.js"></script>
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+
+  <!-- sweetalert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+  <script>
+    document.getElementById('confirmDelete').onclick = function () {
+      Swal.fire({
+        title: 'هل أنت متأكد من الحذف؟',
+        text: 'هذا النص هو مثال نص تجريبي يمكن أن يستبدل في نفس المساحة. لقد تم توليد هذا النص من مولد النص العربي.',
+        icon: 'warning',
+        showCancelButton: true,
+        customClass: {
+          confirmButton: 'btn btn-danger w-100',
+          cancelButton: 'btn btn-outline-danger bg-body w-100'
+        },
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#3085d6',
+        confirmButtonText: 'حذف',
+        cancelButtonText: 'إلغاء'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'تم الحذف!',
+            'لقد تم حذف العنصر بنجاح.',
+            'success'
+          );
+        }
+      });
+    };
+
+    document.getElementById('submitOrder').onclick = function () {
+      // إغلاق الـ Modal
+      const modal = bootstrap.Modal.getInstance(document.getElementById('exampleModal'));
+      modal.hide();
+
+      // تشغيل SweetAlert2
+      Swal.fire({
+        title: 'تم تقديم الطلب بنجاح!',
+        text: 'رقم الطلب (1543)\nتم قبول طلبكم وسيتم دراسته خلال 5 أيام عمل، كما يمكنكم متابعة حالة الطلب في صفحة متابعة الطلبات.',
+        icon: 'success',
+        showCancelButton: true,
+        confirmButtonText: 'تقديم طلب آخر',
+        cancelButtonText: 'شكرا',
+        customClass: {
+          confirmButton: 'btn btn-primary w-100',
+          cancelButton: 'btn btn-outline-primary w-100'
+        }
+      })
+    };
+  </script>
+  <script src="js/argon-dashboard.min.js"></script>
 </body>
 
 </html>
