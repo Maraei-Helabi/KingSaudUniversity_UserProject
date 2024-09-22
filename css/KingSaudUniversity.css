@@ -111,7 +111,11 @@ body {
 {
     border-radius: 0.5rem;
 }
-
+.navbar-vertical.navbar-expand-xs .navbar-collapse {
+    display: block;
+    overflow: auto;
+    height: calc(100vh - 270px);
+}
 @media (max-width: 1200px) {
 	.navbar.navbar-main {
 		width: calc(100% - 1rem);
