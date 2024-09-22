@@ -208,17 +208,24 @@
                 </div>
                 <!-- الكاردات -->
                 <div class="row">
-                    <div class="col-12 col-md-6"></div>
-                    <!-- 
+
                     <div class="col-12 col-md-6">
                         <div class="card mb-3">
-                            <div class="card-body p-3">
-                                <div class="chart">
-                                    <canvas id="myChart" class="chart-canvas" height="300px"></canvas>
+                            <div class="card-body p-3 d-flex gap-2">
+                                <div class="info">
+                                    <p class="mb-2">نوع الدراسة: انتظام كلي</p>
+                                    <p class="mb-2">المرحلة الدراسية: البكالوريوس</p>
+                                    <p class="mb-2">تاريخ الانتهاء: 2008-04-21</p>
+                                    <h4 class="text-center" style="color: var(--main-color);">معدل تراكمي</h4>
+                                    <h4 class="text-center" style="color: var(--main-color);">3.5</h4>
                                 </div>
+                                <div id="chart-container" style="height: 190px !important;width: 190px !important;">
+                                    <canvas id="myChart2" style="height: 190px !important;width: 190px !important;"></canvas>
+                                </div>
+
                             </div>
                         </div>
-                    </div> -->
+                    </div>
 
                     <div class="col-12 col-md-6">
                         <div class="card mb-3">
@@ -342,61 +349,93 @@
     </script>
     <!-- chartjs.js -->
     <script src="/js/plugins/chartjs.min.js"></script>
-    <script >
+    <script>
         var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['عدد السكان المتبقين', 'عدد السكان الأصليين', 'عدد السكان المهاجرين', 'عدد السكان'],
-        datasets: [{
-            label: 'عدد السكان',
-            data: [10, 10, 20, 15],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true,
-                title: {
-                    display: true,
-                    text: 'عدد السكان'
-                }
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['عدد السكان المتبقين', 'عدد السكان الأصليين', 'عدد السكان المهاجرين', 'عدد السكان'],
+                datasets: [{
+                    label: 'عدد السكان',
+                    data: [10, 10, 20, 15],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1
+                }]
             },
-            x: {
-                title: {
-                    display: true,
-                    text: 'الفئات'
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'عدد السكان'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'الفئات'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: true,
+                        labels: {
+                            color: 'rgb(255, 99, 132)'
+                        }
+                    }
                 }
             }
-        },
-        plugins: {
-            legend: {
-                display: true,
-                labels: {
-                    color: 'rgb(255, 99, 132)'
+        });
+
+        // 
+
+        const ctx2 = document.getElementById('myChart2').getContext('2d');
+        const myChart2 = new Chart(ctx2, {
+            type: 'doughnut',
+            data: {
+                labels: ['معدل تراكمي', 'فراغ'],
+                datasets: [{
+                    label: 'معدل تراكمي',
+                    data: [3.5, 6.5], // 10 - 3.5 = 6.5 لتعويض الدائرة
+                    backgroundColor: [
+                        'rgba(75, 192, 192, 0.5)',
+                        '#f4f4f4'
+                    ],
+                    borderColor: [
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(255, 255, 255, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                cutout: '70%', // لعمل شكل دائري
+                plugins: {
+                    legend: {
+                        display: false
+                    }
                 }
             }
-        }
-    }
-});
+        });
 
     </script>
+
     <!-- sweetalert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
     <script src="js/argon-dashboard.min.js"></script>
-</body >
+</body>
 
-</html >
+</html>
