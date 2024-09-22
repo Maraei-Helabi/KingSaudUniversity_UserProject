@@ -100,6 +100,17 @@ body {
 .sidebar #sidenav-collapse-main {
 	height: calc(100% - 120px);
 }
+.navbar-nav .nav-item .nav-link.active,
+.navbar-nav .nav-item:hover .nav-link
+{
+    background-color: var(--main50-color) !important;
+    box-shadow: none;
+    font-weight: 600;
+}
+.navbar-nav .nav-item .nav-link
+{
+    border-radius: 0.5rem;
+}
 
 @media (max-width: 1200px) {
 	.navbar.navbar-main {
@@ -359,25 +370,25 @@ btn-primary:not(:disabled):not(.disabled).active,
 /* upload file */
 /* From Uiverse.io by Yaya12085 */
 .drop-container {
-    background-color: #fff;
-    position: relative;
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    margin-top: 2.1875rem;
-    border-radius: 10px;
-    border: 2px dashed var(--main50-color);
-    color: #444;
-    cursor: pointer;
-    transition: background .2s ease-in-out, border .2s ease-in-out;
+	background-color: #fff;
+	position: relative;
+	display: flex;
+	gap: 10px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	margin-top: 2.1875rem;
+	border-radius: 10px;
+	border: 2px dashed var(--main50-color);
+	color: #444;
+	cursor: pointer;
+	transition: background .2s ease-in-out, border .2s ease-in-out;
 }
 
 .drop-container:hover {
-    background: var(--main50-color);
-    border-color: rgba(17, 17, 17, 0.616);
+	background: var(--main50-color);
+	border-color: rgba(17, 17, 17, 0.616);
 }
 
 .drop-container:hover .drop-title {
@@ -415,6 +426,32 @@ btn-primary:not(:disabled):not(.disabled).active,
 
 #file-input::file-selector-button:hover {
 	background: #0d45a5;
+}
+/* From Uiverse.io by omar49511 */
+.container-btn-file {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    color: #fff;
+    border-style: none;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 4px 8px 10px -3px rgba(0, 0, 0, 0.356);
+    transition: all 250ms;
+}
+.container-btn-file input[type="file"] {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	cursor: pointer;
+}
+.container-btn-file > svg {
+	margin-right: 1em;
 }
 
 /* modal */
