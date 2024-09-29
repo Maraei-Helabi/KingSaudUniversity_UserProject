@@ -252,7 +252,7 @@
                     <div class="col-12 col-md-6">
                         <div class="card mb-3">
                             <div class="card-body p-3 d-flex gap-2">
-                                <div class="info">
+                                <div class="info Chart">
                                     <p class="mb-2">نوع الدراسة: انتظام كلي</p>
                                     <p class="mb-2">المرحلة الدراسية: البكالوريوس</p>
                                     <p class="mb-2">تاريخ الانتهاء: 2008-04-21</p>
@@ -270,26 +270,30 @@
                     <div class="col-12 col-md-6">
                         <div class="card mb-3">
                             <div class="card-body p-3">
+                                <div class="legend mb-2">
+                                    <div class="legend-item "><span
+                                            style="background-color: rgba(54, 162, 235, 0.5); padding: 5px; border-radius: 5px; display: inline-block;"></span>
+                                        عدد المقررات: <span>10 مقررات</span></div>
+                                    <div class="legend-item"><span
+                                            style="background-color: rgba(75, 192, 192, 0.5); padding: 5px; border-radius: 5px; display: inline-block;"></span>
+                                        عدد الساعات المسجلة: <span>5 ساعات</span></div>
+                                    <div class="legend-item"><span
+                                            style="background-color: rgb(54 ,162, 235, 0.5); padding: 5px; border-radius: 5px; display: inline-block;"></span>
+                                        عدد الساعات المتبقة: <span>20 ساعات</span></div>
+                                    <div class="legend-item"><span
+                                            style="background-color: rgba(255, 99, 132, 0.5); padding: 5px; border-radius: 5px; display: inline-block;"></span>
+                                        عدد الانذارات: <span>15 انذار</span></div>
+                                </div>
                                 <div id="chart-container">
                                     <canvas id="myChart"></canvas>
                                 </div>
-                                <div class="legend">
-                                    <div class="legend-item"><span
-                                            style="background-color: rgba(75, 192, 192, 0.5); padding: 5px; border-radius: 5px; display: inline-block;"></span>
-                                        عدد المقترحات: 5 مقترحات</div>
-                                    <div class="legend-item"><span
-                                            style="background-color: rgba(54, 162, 235, 0.5); padding: 5px; border-radius: 5px; display: inline-block;"></span>
-                                        عدد الساعات المسجلة: 10 ساعات</div>
-                                    <div class="legend-item"><span
-                                            style="background-color: rgba(153, 102, 255, 0.5); padding: 5px; border-radius: 5px; display: inline-block;"></span>
-                                        عدد الساعات المنقضية: 15 انذارات</div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
 
                     <div class="col-12 col-md-6">
-                        <div class="card dataCard">
+                        <div class="card dataCard mb-3">
                             <div class="card-header py-2 px-4">
                                 <h5 class="">بيانات التخرج</h5>
                             </div>
@@ -394,21 +398,21 @@
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['عدد السكان المتبقين', 'عدد السكان الأصليين', 'عدد السكان المهاجرين', 'عدد السكان'],
+                labels: ['عدد المقررات', 'الساعات المسجلة', 'الساعات المتبقية', 'عدد الانذارات'],
                 datasets: [{
-                    label: 'عدد السكان',
-                    data: [10, 10, 20, 15],
+                    label: '',
+                    data: [10, 5, 20, 15],
                     backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)'
+                        'rgba(54, 162, 235, 0.5)',
+                        'rgba(75, 192, 192, 0.5)',
+                        'rgb(54 ,162, 235, 0.5)',
+                        'rgba(255, 99, 132, 0.5)'
                     ],
                     borderColor: [
-                        'rgba(255, 99, 132, 1)',
                         'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)'
+                        'rgba(75, 192, 192, 1)',
+                        'rgb(54 162 235)',
+                        'rgba(255, 99, 132, 1)'
                     ],
                     borderWidth: 1
                 }]
@@ -418,20 +422,20 @@
                     y: {
                         beginAtZero: true,
                         title: {
-                            display: true,
+                            display: false,
                             text: 'عدد السكان'
                         }
                     },
                     x: {
                         title: {
-                            display: true,
+                            display: false,
                             text: 'الفئات'
                         }
                     }
                 },
                 plugins: {
                     legend: {
-                        display: true,
+                        display: false  ,
                         labels: {
                             color: 'rgb(255, 99, 132)'
                         }

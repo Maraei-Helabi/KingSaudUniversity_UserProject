@@ -1,12 +1,35 @@
+/*!
+    ************* Design WebSite By MARAEI BIN HLABI**************
+    ************* https://github.com/mraihlabi7 **************
+    ************* Copyright 2024 **************
+ */
+
+
 :root {
+	--nav-background-color: #ab986c;
+	--main-color: #3993a4;
+	--main50-color: #3992a47a;
+
+	--second-color: #ab986c;
+	
+	--white-color: #ffffff;
+	--gary-color: #f8f8f8;
+
+	--bs-btn-focus-box-shadow: 0 0 0 0.2rem #3992a459 !important;
+}
+
+ /* تبع جامعة الملك سعود */
+/* :root {
 	--nav-background-color: #1182bd;
 	--main-color: #1182bd;
 	--main50-color: #c5dfed;
+
+	
 	--white-color: #ffffff;
 	--gary-color: #f8f8f8;
 
 	--bs-btn-focus-box-shadow: 0 0 0 0.2rem #1182bd63 !important;
-}
+} */
 .bgMain {
 	background: var(--main-color) !important;
 }
@@ -256,8 +279,10 @@ body {
 .paginationConrainer .active > .page-link {
 	z-index: 3;
 	color: var(--white-color);
-	background-color: var(--main-color);
-	border-color: var(--main-color);
+	background-color: var(--second-color);
+	border-color: var(--second-color);
+	/* background-color: var(--main-color);
+	border-color: var(--main-color); */
 }
 .paginationConrainer .page-item.active .page-link span,
 .paginationConrainer .page-item:hover .page-link span {
@@ -471,21 +496,24 @@ btn-primary:not(:disabled):not(.disabled).active,
 /* s bottom bar */
 /* From Uiverse.io by akshat-patel28 */
 .BottomBarContainer {
-	display: flex;
-	background-color: var(--main-color);
-	width: 95%;
-	margin-right: 2.5%;
-	height: 75px;
-	align-items: center;
-	justify-content: space-around;
-	border-radius: 10px;
-	box-shadow: rgb(0 0 0 / 18%) 0px 5px 7px 3px, rgb(27 133 219 / 34%) 2px 2px 20px 3px;
-	position: fixed;
-	bottom: 5px;
-	z-index: 100000;
+    display: flex;
+    background-color: var(--second-color);
+    width: 95%;
+    margin-right: 2.5%;
+    height: 75px;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 18%) 0px 5px 7px 3px, rgb(27 133 219 / 23%) 0px 0px 9px 3px;
+    position: fixed;
+    bottom: 5px;
+    z-index: 100000;
+    height: 65px;
+
 }
 
 .buttonPage {
+	position: relative;
 	outline: 0 !important;
 	border: 0 !important;
 	width: 30%;
@@ -500,17 +528,29 @@ btn-primary:not(:disabled):not(.disabled).active,
 	cursor: pointer;
 	display: flex;
 	flex-direction: column;
+	overflow: hidden;
+	height: 65px;
 }
 
 .buttonPage:hover {
 	transform: translateY(-3px);
+	color: var(--main50-color);
+	position: relative;
 }
-
+.buttonPage.active::before{
+	position: absolute;
+    content: "";
+    width: 31px;
+    height: 22px;
+    background: var(--white-color);
+    border-radius: 50%;
+    bottom: -15px;
+}
 .buttonPage .icon {
-	font-size: 35px;
+	font-size: 25px;
 }
-.buttonPage .title {
-	font-size: 12px;
+.buttonPage .tilt {
+	font-size: 14px;
 }
 
 /* e bottom bar */
@@ -534,6 +574,18 @@ btn-primary:not(:disabled):not(.disabled).active,
 }
 .dataCard .card-header {
 	background: var(--main50-color);
+}
+.rating {
+    display: flex;
+    justify-content: center;
+    gap: 5px;}
+.rating .star {
+	font-size: 40px;
+	color: #D9D9D959;
+	cursor: pointer;
+}
+.rating .star.checked {
+	color: gold;
 }
 /*  */
 
@@ -570,6 +622,20 @@ btn-primary:not(:disabled):not(.disabled).active,
 	}
 	.nav.nav-pills .nav-link {
 		font-size: 14px;
+		padding: 8px;
+	}
+	.nav.nav-pills .nav-item {
+		width: 30%;
+	}
+	.mainContainer{
+		padding-bottom: 80px !important;
+	}
+	.info.Chart p.mb-2 {
+		font-size: 12px;
+		font-weight: 600;
+	}
+	.info.Chart h4 {
+		font-size: 16px;
 	}
 }
 @media (min-width: 480px) {
