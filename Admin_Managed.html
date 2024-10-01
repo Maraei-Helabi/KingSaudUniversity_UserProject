@@ -58,38 +58,65 @@
                         aria-expanded="true" aria-controls="collapseExample">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
-                            <i class="fa-solid fa-chart-column"></i>
+                            <i class="fa-solid fa-gear"></i>
                         </div>
-                        <span class="nav-link-text me-1">البيانات</span>
+                        <span class="nav-link-text me-1">تهيئة النظام</span>
                     </a>
                 </li>
                 <div class="collapse show" id="collapseExample">
                     <div class="pe-3">
                         <li class="nav-item">
                             <a class="nav-link" href="/AcademicData.html">
-                                <div
+                                <!-- <div
                                     class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
                                     <i class="fa-solid fa-chart-column"></i>
-                                </div>
-                                <span class="nav-link-text me-1"> الاكاديمية</span>
+                                </div> -->
+                                <span class="nav-link-text me-1"> الادارات</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="/FamilyInformation.html">
-                                <div
+                            <a class="nav-link" href="/AcademicData.html">
+                                <!-- <div
                                     class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
-                                    <i class="fa-solid fa-users-rectangle"></i>
-                                </div>
-                                <span class="nav-link-text me-1"> العائلية</span>
+                                    <i class="fa-solid fa-chart-column"></i>
+                                </div> -->
+                                <span class="nav-link-text me-1"> ادارة المستخدمين</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/PersonalData.html">
-                                <div
+                            <a class="nav-link" href="/AcademicData.html">
+                                <!-- <div
                                     class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
-                                    <i class="fa-solid fa-user"></i>
-                                </div>
-                                <span class="nav-link-text me-1">الشخصية والبنكية</span>
+                                    <i class="fa-solid fa-chart-column"></i>
+                                </div> -->
+                                <span class="nav-link-text me-1"> ادارة البرامج</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/AcademicData.html">
+                                <!-- <div
+                                    class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-chart-column"></i>
+                                </div> -->
+                                <span class="nav-link-text me-1"> ادارة الخدمات</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/AcademicData.html">
+                                <!-- <div
+                                    class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-chart-column"></i>
+                                </div> -->
+                                <span class="nav-link-text me-1"> ادارة السنوات الدراسية</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/AcademicData.html">
+                                <!-- <div
+                                    class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-chart-column"></i>
+                                </div> -->
+                                <span class="nav-link-text me-1"> الدعم من الجهات المانحة</span>
                             </a>
                         </li>
                     </div>
@@ -246,6 +273,9 @@
                                         الوصف</th>
                                     <th
                                         class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        البريد الالكتروني</th>
+                                    <th
+                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         كلمة المرور</th>
                                     <th
                                         class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
@@ -265,6 +295,8 @@
                                     </td>
                                     <td class="align-middle text-center text-sm">
                                         وصف </td>
+                                    <td class="align-middle text-center text-sm">
+                                        marai@g.com </td>
                                     <td class="align-middle text-center text-sm">
                                         ********* </td>
                                     <td class="align-middle text-center">
@@ -333,26 +365,28 @@
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <div class="col-12 col-md">
+                        <div class="col-12">
                             <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">اسم الخدمة</label>
-                                <select class="form-select customSelect" aria-label="Default select example">
-                                    <option value="1"></option>
-                                    <option value="2"></option>
-                                    <option value="3"></option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md">
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">اسم الوحدة</label>
+                                <label for="exampleFormControlInput1" class="form-label">الاسم</label>
                                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
                             </div>
                         </div>
-                        <div class="col-12 col-md">
+                        <div class="col-12">
                             <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">المبلغ المعتمد</label>
-                                <input type="date" class="form-control" id="exampleFormControlInput1" placeholder="">
+                                <label for="exampleFormControlInput1" class="form-label">الوصف</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">البريد الاكتروني</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">رابط الsms</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
                             </div>
                         </div>
                     </div>
