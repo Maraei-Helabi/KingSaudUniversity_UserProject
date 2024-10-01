@@ -490,7 +490,9 @@ btn-primary:not(:disabled):not(.disabled).active,
 .container-btn-file > svg {
 	margin-right: 1em;
 }
-
+.input-group.focused .input-group-text {
+    border-color: var(--main-color) !important;
+}
 /* modal */
 
 /* s bottom bar */
@@ -588,6 +590,16 @@ btn-primary:not(:disabled):not(.disabled).active,
 	color: gold;
 }
 /*  */
+/* table */
+.customTable.table th {
+    font-weight: 600;
+    font-weight: bold !important;
+    font-size: 14px !important;
+    background: var(--main50-color) !important;
+    color: #344767 !important;
+    opacity: 1 !important;
+}
+/* table */
 
 
 @media (min-width: 1200px) {
