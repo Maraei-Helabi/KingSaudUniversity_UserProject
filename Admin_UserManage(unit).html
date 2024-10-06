@@ -225,11 +225,11 @@
             <div class="card mb-3 bgWhite">
                 <div class="filteringContiner row p-2">
                     <div class="col-12 col-sm-3">
-                        <a class="btn btn-primary w-100" href="Admin_UserManage(add).html">
+                        <a class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#addModal">
                             <i class="fa-solid fa-plus text-dark ms-2 WhiteColor" aria-hidden="true"></i>
-                            اضافة خدمة جديده</a>
+                            اضافة وحدة جديده</a>
                     </div>
-                    <div class="col-12 col-sm-6">
+                    <!-- <div class="col-12 col-sm-6">
                         <div class="input-group">
                             <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
                             <input class="form-control" placeholder="بحث" type="text">
@@ -243,7 +243,7 @@
                                 <i class="fa-solid fa-filter"></i>
                             </button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -266,15 +266,6 @@
                                         اسم المستخدم الجامعي</th>
                                     <th
                                         class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                        البريد الالكتروني الجامعي</th>
-                                    <th
-                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                        القسم الجامعي</th>
-                                    <th
-                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                        الفعالية</th>
-                                    <th
-                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         الاجرائات</th>
                                 </tr>
                             </thead>
@@ -288,28 +279,12 @@
                                     </td>
                                     <td class="align-middle text-center text-sm">
                                         وصف </td>
-                                    <td class="align-middle text-center text-sm">
-                                        marai@g.com </td>
-                                    <td class="align-middle text-center text-sm">
-                                        ********* </td>
-                                    <td class="align-middle text-center">
-                                        <div class="form-check">
-                                            <input class="form-check-input m-auto" type="checkbox" value="" id="fcustomCheck1" checked="" disabled>
-                                        </div>
-                                    </td>
                                     <td class="align-middle text-center d-flex gap-1">
-                                        <a class="btn btn-outline-main mb-0 px-2 py-2" href="Admin_UserManage(edit).html">
-                                            <i class="fa-solid fa-pencil ms-1 text-warning"></i>
-                                            تعديل
-                                        </a>
                                         <a class="btn btn-outline-danger mb-0 px-2 py-2 text-danger w-35"
                                             id="confirmDelete"><i class="far fa-trash-alt ms-2"
                                                 aria-hidden="true"></i>حذف
                                         </a>
 
-                                        <a class="btn btn-outline-main mb-0 px-2 py-2" href="Admin_UserManage(unit).html">
-                                            الوحدات
-                                        </a>
                                     </td>
                                 </tr>
 
@@ -355,8 +330,8 @@
         </div>
     </main>
 
-    <!-- old info Modal -->
-    <div class="modal fade modal-lg" id="oldModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <!-- add  Modal -->
+    <div class="modal fade modal-lg" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <!-- data-bs-toggle="modal" data-bs-target="#oldModal" -->
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -369,35 +344,31 @@
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-12 col-md">
                             <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">الاسم</label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                                <label for="exampleFormControlInput1" class="form-label">الوحدة</label>
+                                <select class="form-select customSelect" aria-label="Default select example">
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                </select>
                             </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-12 col-md">
                             <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">الوصف</label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                                <label for="exampleFormControlInput1" class="form-label">اسم المستخدم</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1"
+                                    >
                             </div>
                         </div>
-                        <div class="col-12">
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">البريد الاكتروني</label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">رابط الsms</label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
-                            </div>
-                        </div>
+
                     </div>
+
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">حفظ</button>
+                    <button type="button" class="btn btn-primary" id="submitOrder">فلترة</button>
                     <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">الغاء</button>
+                </div>
                 </div>
             </div>
         </div>
