@@ -217,9 +217,9 @@
 
         <div class="max mainContainer container-fluid  border-radius-xl p-2">
 
-            <h2 class="pageTitle mb-1 mt-2 px-2">ادارة المستخدمين</h2>
+            <h2 class="pageTitle mb-1 mt-2 px-2">ادارة الخدمات و الانشظة</h2>
             <p class="px-2 mb-5 cursor-pointer"><span><i class="fa-solid fa-house"></i> الرئسية / </span><span
-                    class="MainColor font-weight-bold">ادارة المستخدمين </span></p>
+                    class="MainColor font-weight-bold">ادارة الخدمات و الانشظة </span></p>
 
             <!-- الفلتره -->
             <div class="card mb-3 bgWhite">
@@ -260,19 +260,19 @@
                                         م</th>
                                     <th
                                         class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                                        اسم الموظف الثلاثي</th>
+                                        اسم الوحدة</th>
                                     <th
                                         class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                        اسم المستخدم الجامعي</th>
+                                        اسم النشاط</th>
                                     <th
                                         class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                        البريد الالكتروني الجامعي</th>
+                                        قيمة الدعم</th>
                                     <th
                                         class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                        القسم الجامعي</th>
+                                        الفترة بين تقديم النشاط بالايام</th>
                                     <th
                                         class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                        الفعالية</th>
+                                        الخدمة المفعلة؟</th>
                                     <th
                                         class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                         الاجرائات</th>
@@ -294,21 +294,31 @@
                                         ********* </td>
                                     <td class="align-middle text-center">
                                         <div class="form-check">
-                                            <input class="form-check-input m-auto" type="checkbox" value="" id="fcustomCheck1" checked="" disabled>
+                                            <input class="form-check-input m-auto" type="checkbox" value=""
+                                                id="fcustomCheck1" checked="" disabled>
                                         </div>
                                     </td>
                                     <td class="align-middle text-center d-flex gap-1">
-                                        <a class="btn btn-outline-warning mb-0 px-2 py-2" href="Admin_UserManage(edit).html">
+                                        <a class="btn btn-outline-warning mb-0 px-2 py-2"
+                                            href="Admin_UserManage(edit).html">
                                             <i class="fa-solid fa-pencil ms-1 text-warning"></i>
                                             تعديل
                                         </a>
-                                        <a class="btn btn-outline-danger mb-0 px-2 py-2 text-danger w-35"
-                                            id="confirmDelete"><i class="far fa-trash-alt ms-2"
-                                                aria-hidden="true"></i>حذف
+
+
+                                        <a class="btn btn-outline-main mb-0 px-2 py-2"
+                                            href="Admin_UserManage(unit).html">
+                                            <i class="fa-regular fa-paper-plane"></i>
+                                            شروط الخدمة
                                         </a>
 
-                                        <a class="btn btn-outline-main mb-0 px-2 py-2" href="Admin_UserManage(unit).html">
-                                            الوحدات
+                                        <a class="btn btn-outline-success mb-0 px-2 py-2"
+                                            href="">
+                                            <div class="align-items-end blue cardInfoHomePage d-flex flex-row-reverse form-check noHover p-0 form-switch">
+                                                <label class="form-check-label position-relative me-6" for="flexSwitchCheckDefault">تفعيل</label>
+                                                <input class="form-check-input border-success inputCheckSuccess" type="checkbox"
+                                                    id="flexSwitchCheckDefault" checked="">
+                                            </div>
                                         </a>
                                     </td>
                                 </tr>
@@ -404,7 +414,7 @@
     </div>
     <!-- Modal -->
 
-    
+
     <!-- filterModal -->
     <div class="modal fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel"
         aria-hidden="true">
@@ -420,7 +430,7 @@
                     <div class="row">
                         <div class="col-12 col-md">
                             <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">الوحدة</label>
+                                <label for="exampleFormControlInput1" class="form-label">الخدمة</label>
                                 <select class="form-select customSelect" aria-label="Default select example">
                                     <option value="1"></option>
                                     <option value="2"></option>
@@ -430,9 +440,8 @@
                         </div>
                         <div class="col-12 col-md">
                             <div class="mb-3">
-                                <label for="exampleFormControlInput1" class="form-label">اسم المستخدم</label>
-                                <input type="text" class="form-control" id="exampleFormControlInput1"
-                                    >
+                                <label for="exampleFormControlInput1" class="form-label">حالة الخدمة</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1">
                             </div>
                         </div>
 

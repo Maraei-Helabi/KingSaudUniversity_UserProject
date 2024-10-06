@@ -600,7 +600,9 @@ btn-primary:not(:disabled):not(.disabled).active,
     opacity: 1 !important;
 }
 /* table */
-
+.inputCheckSuccess.form-check-input:checked[type="checkbox"]{
+	background:#2dce89 !important;
+}
 
 @media (min-width: 1200px) {
 	.sidenav.fixed-end > .main-content {
