@@ -603,6 +603,22 @@ btn-primary:not(:disabled):not(.disabled).active,
 .inputCheckSuccess.form-check-input:checked[type="checkbox"]{
 	background:#2dce89 !important;
 }
+.form-check:not(.form-switch) .form-check-input[type="checkbox"]:checked, .form-check:not(.form-switch) .form-check-input[type="radio"]:checked {
+    border: 0;
+    margin-top: 8px;
+}
+
+/* collapse */
+.accordion div button[aria-expanded=true] .collapse-close {
+    display: none;
+}
+.accordion div button[aria-expanded=false] .collapse-open {
+    display: none;
+}
+.accordion .accordion-button::after{
+	display: none;
+}
+/* collapse */
 
 @media (min-width: 1200px) {
 	.sidenav.fixed-end > .main-content {
