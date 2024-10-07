@@ -242,7 +242,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-sm-3 col-md-2">
-                        <a class="btn btn-outline-primary w-100 mb-0" data-bs-toggle="" data-bs-target="#">
+                        <a id="exportToExcel" class="btn btn-outline-primary w-100 mb-0" data-bs-toggle="" data-bs-target="#">
                             <i class="fa-solid fa-download  ms-2 WhiteColo"></i>
                             تصدير</a>
                     </div>
@@ -255,7 +255,7 @@
             </div> -->
                 <div class="card-body pb-2 pt-0 px-0">
                     <div class="table-responsive p-0">
-                        <table class="customTable table align-items-center mb-0">
+                        <table id="dataTableToExcel" class="customTable table align-items-center mb-0">
                             <thead>
                                 <tr>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
@@ -643,35 +643,47 @@
     <script src="js/plugins/perfect-scrollbar.min.js"></script>
     <script src="js/plugins/smooth-scrollbar.min.js"></script>
     <!--  -->
+
     <script src="js/all.min.js"></script>
     <script src="js/core/bootstrap.min.js"></script>
+    <!-- تحوي الملف الى اكسل -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script>
+        document.getElementById('exportToExcel').addEventListener('click', function() {
+            console.log('exportToExcel clicked')
+            const table = document.getElementById('dataTableToExcel');
+            console.log(table)
+            const workbook = XLSX.utils.table_to_book(table, { sheet: "Sheet1" });
+            XLSX.writeFile(workbook, 'data.xlsx');
+        });
+    </script>
     <!-- sweetalert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
     <script>
-        document.getElementById('confirmDelete').onclick = function () {
-            Swal.fire({
-                title: 'هل أنت متأكد من الحذف؟',
-                text: 'هذا النص هو مثال نص تجريبي يمكن أن يستبدل في نفس المساحة. لقد تم توليد هذا النص من مولد النص العربي.',
-                icon: 'warning',
-                showCancelButton: true,
-                customClass: {
-                    confirmButton: 'btn btn-danger w-100',
-                    cancelButton: 'btn btn-outline-danger bg-body w-100'
-                },
-                confirmButtonColor: '#d33',
-                cancelButtonColor: '#3085d6',
-                confirmButtonText: 'حذف',
-                cancelButtonText: 'إلغاء'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    Swal.fire(
-                        'تم الحذف!',
-                        'لقد تم حذف العنصر بنجاح.',
-                        'success'
-                    );
-                }
-            });
-        };
+        // document.getElementById('confirmDelete').onclick = function () {
+        //     Swal.fire({
+        //         title: 'هل أنت متأكد من الحذف؟',
+        //         text: 'هذا النص هو مثال نص تجريبي يمكن أن يستبدل في نفس المساحة. لقد تم توليد هذا النص من مولد النص العربي.',
+        //         icon: 'warning',
+        //         showCancelButton: true,
+        //         customClass: {
+        //             confirmButton: 'btn btn-danger w-100',
+        //             cancelButton: 'btn btn-outline-danger bg-body w-100'
+        //         },
+        //         confirmButtonColor: '#d33',
+        //         cancelButtonColor: '#3085d6',
+        //         confirmButtonText: 'حذف',
+        //         cancelButtonText: 'إلغاء'
+        //     }).then((result) => {
+        //         if (result.isConfirmed) {
+        //             Swal.fire(
+        //                 'تم الحذف!',
+        //                 'لقد تم حذف العنصر بنجاح.',
+        //                 'success'
+        //             );
+        //         }
+        //     });
+        // };
 
         const buttons = document.querySelectorAll('.submitOrder');
 
