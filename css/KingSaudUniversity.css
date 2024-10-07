@@ -33,6 +33,9 @@
 .bgMain {
 	background: var(--main-color) !important;
 }
+.bgSecound {
+	background: var(--second-color) !important;
+}
 .bgWhite {
 	background: var(--white-color) !important;
 }
@@ -41,6 +44,9 @@
 }
 .MainColor {
 	color: var(--main-color) !important;
+}
+.SecoundColor {
+	color: var(--second-color) !important;
 }
 .WhiteColor {
 	color: var(--white-color) !important;
