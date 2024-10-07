@@ -242,7 +242,7 @@
                         </div>
                     </div>
                     <div class="col-12 col-sm-3 col-md-2">
-                        <a id="exportToExcel" class="btn btn-outline-primary w-100 mb-0" data-bs-toggle="" data-bs-target="#">
+                        <a id="exportToExcel" class="btn btn-outline-primary w-100 mb-0" onclick="ExportTableToExxel('studentDate')">
                             <i class="fa-solid fa-download  ms-2 WhiteColo"></i>
                             تصدير</a>
                     </div>
@@ -255,7 +255,7 @@
             </div> -->
                 <div class="card-body pb-2 pt-0 px-0">
                     <div class="table-responsive p-0">
-                        <table id="dataTableToExcel" class="customTable table align-items-center mb-0">
+                        <table id="studentDate" class="customTable table align-items-center mb-0">
                             <thead>
                                 <tr>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
@@ -590,15 +590,17 @@
                                 <label for="exampleFormControlInput1" class="form-label">نوع المنحة</label>
                                 <div class="d-flex justify-content-evenly align-items-center gap-2">
                                     <div
-                                    class=" justify-content-endalign-items-end blue cardInfoHomePage d-flex flex-row-reverse form-check noHover p-0 mb-3">
-                                    <span class="titleOfcardInfoHomePage position-relative me-5 mb-1">داخلي</span>
-                                    <input class="form-check-input" type="checkbox" value="" id="fcustomCheck1" checked="">
-                                </div>
-                                <div
-                                class=" justify-content-endalign-items-end blue cardInfoHomePage d-flex flex-row-reverse form-check noHover p-0 mb-3">
-                                <span class="titleOfcardInfoHomePage position-relative me-5 mb-1">خارجي</span>
-                                <input class="form-check-input" type="checkbox" value="" id="fcustomCheck1" checked="">
-                            </div>
+                                        class=" justify-content-endalign-items-end blue cardInfoHomePage d-flex flex-row-reverse form-check noHover p-0 mb-3">
+                                        <span class="titleOfcardInfoHomePage position-relative me-5 mb-1">داخلي</span>
+                                        <input class="form-check-input" type="checkbox" value="" id="fcustomCheck1"
+                                            checked="">
+                                    </div>
+                                    <div
+                                        class=" justify-content-endalign-items-end blue cardInfoHomePage d-flex flex-row-reverse form-check noHover p-0 mb-3">
+                                        <span class="titleOfcardInfoHomePage position-relative me-5 mb-1">خارجي</span>
+                                        <input class="form-check-input" type="checkbox" value="" id="fcustomCheck1"
+                                            checked="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -607,15 +609,17 @@
                                 <label for="exampleFormControlInput1" class="form-label">الجنس</label>
                                 <div class="d-flex justify-content-evenly align-items-center gap-2">
                                     <div
-                                    class=" justify-content-endalign-items-end blue cardInfoHomePage d-flex flex-row-reverse form-check noHover p-0 mb-3">
-                                    <span class="titleOfcardInfoHomePage position-relative me-5 mb-1">ذكر</span>
-                                    <input class="form-check-input" type="checkbox" value="" id="fcustomCheck1" checked="">
-                                </div>
-                                <div
-                                class=" justify-content-endalign-items-end blue cardInfoHomePage d-flex flex-row-reverse form-check noHover p-0 mb-3">
-                                <span class="titleOfcardInfoHomePage position-relative me-5 mb-1">انثى</span>
-                                <input class="form-check-input" type="checkbox" value="" id="fcustomCheck1" checked="">
-                            </div>
+                                        class=" justify-content-endalign-items-end blue cardInfoHomePage d-flex flex-row-reverse form-check noHover p-0 mb-3">
+                                        <span class="titleOfcardInfoHomePage position-relative me-5 mb-1">ذكر</span>
+                                        <input class="form-check-input" type="checkbox" value="" id="fcustomCheck1"
+                                            checked="">
+                                    </div>
+                                    <div
+                                        class=" justify-content-endalign-items-end blue cardInfoHomePage d-flex flex-row-reverse form-check noHover p-0 mb-3">
+                                        <span class="titleOfcardInfoHomePage position-relative me-5 mb-1">انثى</span>
+                                        <input class="form-check-input" type="checkbox" value="" id="fcustomCheck1"
+                                            checked="">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -649,13 +653,23 @@
     <!-- تحوي الملف الى اكسل -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
     <script>
-        document.getElementById('exportToExcel').addEventListener('click', function() {
+        // تصدير الى ملف اكسل
+        function ExportTableToExxel(tableID) {
             console.log('exportToExcel clicked')
-            const table = document.getElementById('dataTableToExcel');
-            console.log(table)
+
+            var table = document.getElementById(tableID);
             const workbook = XLSX.utils.table_to_book(table, { sheet: "Sheet1" });
-            XLSX.writeFile(workbook, 'data.xlsx');
-        });
+            XLSX.writeFile(workbook, `${tableID}.xlsx`);
+        }
+
+
+        // document.getElementById('exportToExcel').addEventListener('click', function() {
+        //     console.log('exportToExcel clicked')
+        //     const table = document.getElementById('dataTableToExcel');
+        //     console.log(table)
+        //     const workbook = XLSX.utils.table_to_book(table, { sheet: "Sheet1" });
+        //     XLSX.writeFile(workbook, 'data.xlsx');
+        // });
     </script>
     <!-- sweetalert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
