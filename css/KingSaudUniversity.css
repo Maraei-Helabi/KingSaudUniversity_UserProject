@@ -628,7 +628,7 @@ btn-primary:not(:disabled):not(.disabled).active,
 }
 /* collapse */
 .bg-warning {
-    background-color: #fd7e14 !important;
+    background-color: #f6b014 !important;
 }
 
 @media (min-width: 1200px) {
