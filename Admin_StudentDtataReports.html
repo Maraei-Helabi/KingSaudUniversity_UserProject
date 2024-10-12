@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png"> -->
+    <title>
+        KingSaudUniversity
+    </title>
+    <!--     Fonts and icons     -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="css/all.min.css" rel="stylesheet" type="text/css">
+    <!-- sweetalert2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+    <!-- CSS Files -->
+    <link id="pagestyle" href="css/argon-dashboard.css" rel="stylesheet" />
+    <link href="css/KingSaudUniversity.css" rel="stylesheet">
+</head>
+
+<body class="g-sidenav-show rtl  bg-gray-100">
+    <!-- يعمل باك قراون ازرق -->
+    <!-- <div class="min-height-300 bg-primary position-absolute w-100"></div> -->
+    <aside
+        class=" sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-2 fixed-end me-4 rotate-caret align-content-between d-flex"
+        id="sidenav-main">
+        <div class="sidenav-header w-100">
+            <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute start-0 top-0 d-none d-xl-none"
+                aria-hidden="true" id="iconSidenav"></i>
+            <a class="navbar-brand m-0 p-0 h-100"
+                href=" https://demos.creative-tim.com/argon-dashboard/pages/dashboard.html " target="_blank">
+                <img src="imgs/جامعة الملك سعود (1).png" class="navbar-brand-img h-100 w-100 max-height-100"
+                    alt="main_logo">
+            </a>
+        </div>
+        <hr class="horizontal dark mt-0">
+        <div class="collapse navbar-collapse px-0 w-auto " id="sidenav-collapse-main">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/index.html">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-house-user"></i>
+                        </div>
+                        <span class="nav-link-text me-1">الرئيسية</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " data-bs-toggle="collapse" href="#collapseExample" role="button"
+                        aria-expanded="true" aria-controls="collapseExample">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <span class="nav-link-text me-1">تهيئة النظام</span>
+                    </a>
+                </li>
+                <div class="collapse show" id="collapseExample">
+                    <div class="pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/AcademicData.html">
+                                <!-- <div
+                                    class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-chart-column"></i>
+                                </div> -->
+                                <span class="nav-link-text me-1"> الادارات</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/AcademicData.html">
+                                <!-- <div
+                                    class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-chart-column"></i>
+                                </div> -->
+                                <span class="nav-link-text me-1"> ادارة المستخدمين</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/AcademicData.html">
+                                <!-- <div
+                                    class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-chart-column"></i>
+                                </div> -->
+                                <span class="nav-link-text me-1"> ادارة البرامج</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/AcademicData.html">
+                                <!-- <div
+                                    class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-chart-column"></i>
+                                </div> -->
+                                <span class="nav-link-text me-1"> ادارة الخدمات</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/AcademicData.html">
+                                <!-- <div
+                                    class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-chart-column"></i>
+                                </div> -->
+                                <span class="nav-link-text me-1"> ادارة السنوات الدراسية</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/AcademicData.html">
+                                <!-- <div
+                                    class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-chart-column"></i>
+                                </div> -->
+                                <span class="nav-link-text me-1"> الدعم من الجهات المانحة</span>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+
+                <li class="nav-item">
+                    <a class="nav-link " href="/Degrees.html">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-newspaper"></i>
+                        </div>
+                        <span class="nav-link-text me-1">الشهادات</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/violations.html">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-ban"></i>
+                        </div>
+                        <span class="nav-link-text me-1">المخالفات</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="sidenav-footer mx-3 w-100">
+            <a href="/ErrorPage.html" class="btn btn-reddit mb-3 w-100">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span class="me-1">تسجيل خروج</span>
+            </a>
+        </div>
+    </aside>
+
+
+    <main class="main-contentAdmin main-content position-relative border-radius-lg overflow-hidden">
+        <!-- Navbar -->
+        <nav class="  navbar navbar-main navbar-expand-lg py-1 px-0 m-2 shadow-none border-radius-xl position-sticky bg-white left-auto top-2 z-index-sticky bg-gradient-dark"
+            id="navbarBlur" data-scroll="false">
+            <div class="container-fluid px-3">
+                <div class="navbar-nav navContent">
+                    <div class="nav-item d-xl-none pe-3 d-flex align-items-center">
+                        <a href="javascript:;" class="nav-link text-white p-0" id="iconNavbarSidenav">
+                            <div class="sidenav-toggler-inner">
+                                <i class="sidenav-toggler-line bg-white"></i>
+                                <i class="sidenav-toggler-line bg-white"></i>
+                                <i class="sidenav-toggler-line bg-white"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <img class="d-xl-none d-block" src="imgs/Imamu/Imamu_sec_logo-01.png" style="    width: 300px;
+    height: 61px;">
+                    <div class="align-items-center d-flex gap-4">
+                        <div class="nav-item navDrop dropdown pt-1 d-flex align-items-center">
+
+                            <!--  -->
+                            <a href="javascript:;" class="nav-link text-white p-0" id="dropdownMenuButton"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-bell cursor-pointer" style="font-size: 20px;"></i>
+                            </a>
+                            <ul class="dropdown-menu  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton"
+                                style="width: 300px;">
+                                <li class="mb-2">
+                                    <a class="dropdown-item border-radius-md p-1" href="javascript:;">
+                                        <div class="d-flex py-1">
+                                            <div class="my-auto">
+                                                <img src="imgs/nutyimage.png" class="avatar avatar-sm  ms-2 ">
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-center w-100">
+                                                <h6
+                                                    class="text-sm font-weight-normal mb-1 d-flex justify-content-between align-items-center">
+                                                    <span class="font-weight-bold MainColor">تم قبول طلبكم رقم7</span>
+                                                    <p class="text-xs text-secondary mb-0">
+                                                        <i class="fa fa-clock me-1"></i>
+                                                        منذ 12 ساعة
+                                                    </p>
+                                                </h6>
+                                                <p class="text-xs mb-0 text-end font-weight-bold">
+                                                    تم قبول طلبكم من قبل الادارة
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="nav-item navDrop d-flex align-items-center">
+                            <a href="javascript:;" class="nav-link text-white font-weight-bold px-0">
+                                <!-- <i class="fa fa-user me-sm-1"></i> -->
+                                <img src="imgs/team-3.jpg" class="userAvatar avatar avatar-sm m-0 ms-1">
+                                <span class="d-sm-inline d-none">عمر عبدالعزيز</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navb ar -->
+
+        <div class="max mainContainer container-fluid  border-radius-xl p-2">
+
+            <h2 class="pageTitle mb-1 mt-2 px-2">بيانات الطلبة الدوليين</h2>
+            <p class="px-2 mb-5 cursor-pointer"><span><i class="fa-solid fa-house"></i> الرئسية / التقارير و الاستعلامات /</span><span
+                    class="MainColor font-weight-bold">بيانات الطلبة الدوليين </span></p>
+
+            <!-- الفلتره -->
+            <div class="card mb-3 bgWhite">
+                <div class="filteringContiner row p-2 gap-2 gap-sm-0">
+                    <div class="col-12 col-sm-6 col-md-7">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+                            <input class="form-control" placeholder="بحث" type="text">
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-3">
+                        <div class="d-flex gap-5 d-md-block">
+                            <button type="button" class="btn btn-outline-primary mb-0 w-100" data-bs-toggle="modal"
+                                data-bs-target="#filterModal">
+                                <i class="fa-solid fa-filter"></i>
+                                <span>فلترة</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-3 col-md-2">
+                        <a id="exportToExcel" class="btn btn-outline-primary w-100 mb-0" onclick="ExportTableToExxel('studentDate')">
+                            <i class="fa-solid fa-download  ms-2 WhiteColo"></i>
+                            تصدير</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الجدول -->
+            <div class="card mb-3 overflow-hidden">
+                <!-- <div class="card-header pb-0">
+            </div> -->
+                <div class="card-body pb-2 pt-0 px-0">
+                    <div class="table-responsive p-0">
+                        <table id="studentDate" class="customTable table align-items-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        م</th>
+                                    <th
+                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        الرقم الجامعي</th>
+                                        <th
+                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        اسم الطالب</th>
+                                        <th
+                                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                            الجنسية
+                                        </th>
+                                        <th
+                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        المرحلة الدراسية</th>
+                                        <th
+                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        الكلية </th>
+                                    <th
+                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        القسم</th>
+                                    <th
+                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        التخصص</th>
+                                    <th
+                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        الجوال</th>
+                                    <th
+                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        البريد الجامعي</th>
+                                    <th
+                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        حالة الطالب</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        1
+                                    </td>
+                                    <td>
+                                        مرعي علي بن هلابي
+                                    </td>
+                                    <td class="align-middle text-center text-sm">
+                                        2020 </td>
+                                    <td class="align-middle text-center text-sm">
+                                        2030 </td>
+                                    <td class="align-middle text-center text-sm">
+                                        2030 </td>
+                                    <td class="align-middle text-center text-sm">
+                                        2030 </td>
+                                    <td class="align-middle text-center text-sm">
+                                        2030 </td>
+                                    <td class="align-middle text-center text-sm">
+                                        2030 </td>
+                                    <td class="align-middle text-center text-sm">
+                                        2030 </td>
+                                    <td class="align-middle text-center text-sm">
+                                        2030 </td>
+                                    <td class="align-middle text-center text-sm">
+                                        2030 </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- البجنيشن -->
+            <div class="paginationConrainer">
+                <div class="nav nav-tabs nav nav-pills nav-fill p-1 flex-row bgGray justify-content-between">
+                    <div class="numOfPage d-flex align-content-center gap-2">
+                        <span class="text-dark">عدد العناصر:</span>
+                        <select class="customSelect form-select form-select-sm w-auto pe-4 ps-2 "
+                            aria-label="Small select example">
+                            <option value="1">10</option>
+                            <option value="2">20</option>
+                            <option value="3">30</option>
+                        </select>
+                    </div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination mb-0">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+
+
+
+    <!-- filterModal -->
+    <div class="modal fade modal-lg" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="filterModalLabel">فلترة النتائج</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">الوحدة</label>
+                                <select class="form-select customSelect" aria-label="Default select example">
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">الخدمة</label>
+                                <select class="form-select customSelect" aria-label="Default select example">
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">الكلية</label>
+                                <select class="form-select customSelect" aria-label="Default select example">
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">المرحلة الدراسية</label>
+                                <select class="form-select customSelect" aria-label="Default select example">
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">تاريخ التقديم</label>
+                                <input type="date" class="form-control" id="exampleFormControlInput1">
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">تاريخ اخر حركة</label>
+                                <input type="date" class="form-control" id="exampleFormControlInput1">
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">الجنسية</label>
+                                <select class="form-select customSelect" aria-label="Default select example">
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">نوع المنحة</label>
+                                <div class="d-flex justify-content-evenly align-items-center gap-2">
+                                    <div
+                                        class=" justify-content-endalign-items-end blue cardInfoHomePage d-flex flex-row-reverse form-check noHover p-0 mb-3">
+                                        <span class="titleOfcardInfoHomePage position-relative me-5 mb-1">داخلي</span>
+                                        <input class="form-check-input" type="checkbox" value="" id="fcustomCheck1"
+                                            checked="">
+                                    </div>
+                                    <div
+                                        class=" justify-content-endalign-items-end blue cardInfoHomePage d-flex flex-row-reverse form-check noHover p-0 mb-3">
+                                        <span class="titleOfcardInfoHomePage position-relative me-5 mb-1">خارجي</span>
+                                        <input class="form-check-input" type="checkbox" value="" id="fcustomCheck1"
+                                            checked="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">الجنس</label>
+                                <div class="d-flex justify-content-evenly align-items-center gap-2">
+                                    <div
+                                        class=" justify-content-endalign-items-end blue cardInfoHomePage d-flex flex-row-reverse form-check noHover p-0 mb-3">
+                                        <span class="titleOfcardInfoHomePage position-relative me-5 mb-1">ذكر</span>
+                                        <input class="form-check-input" type="checkbox" value="" id="fcustomCheck1"
+                                            checked="">
+                                    </div>
+                                    <div
+                                        class=" justify-content-endalign-items-end blue cardInfoHomePage d-flex flex-row-reverse form-check noHover p-0 mb-3">
+                                        <span class="titleOfcardInfoHomePage position-relative me-5 mb-1">انثى</span>
+                                        <input class="form-check-input" type="checkbox" value="" id="fcustomCheck1"
+                                            checked="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="">فلترة</button>
+                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">الغاء</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- filterModal -->
+    <!--   Core JS Files   -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <!-- خاصه بالسايد بار -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="js/core/popper.min.js"></script>
+    <script src="js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="js/plugins/smooth-scrollbar.min.js"></script>
+    <!--  -->
+
+    <script src="js/all.min.js"></script>
+    <script src="js/core/bootstrap.min.js"></script>
+    <!-- تحوي الملف الى اكسل -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script>
+        // تصدير الى ملف اكسل
+        function ExportTableToExxel(tableID) {
+            console.log('exportToExcel clicked')
+
+            var table = document.getElementById(tableID);
+            const workbook = XLSX.utils.table_to_book(table, { sheet: "Sheet1" });
+            XLSX.writeFile(workbook, `${tableID}.xlsx`);
+        }
+
+
+        // document.getElementById('exportToExcel').addEventListener('click', function() {
+        //     console.log('exportToExcel clicked')
+        //     const table = document.getElementById('dataTableToExcel');
+        //     console.log(table)
+        //     const workbook = XLSX.utils.table_to_book(table, { sheet: "Sheet1" });
+        //     XLSX.writeFile(workbook, 'data.xlsx');
+        // });
+    </script>
+    <!-- sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script>
+        // document.getElementById('confirmDelete').onclick = function () {
+        //     Swal.fire({
+        //         title: 'هل أنت متأكد من الحذف؟',
+        //         text: 'هذا النص هو مثال نص تجريبي يمكن أن يستبدل في نفس المساحة. لقد تم توليد هذا النص من مولد النص العربي.',
+        //         icon: 'warning',
+        //         showCancelButton: true,
+        //         customClass: {
+        //             confirmButton: 'btn btn-danger w-100',
+        //             cancelButton: 'btn btn-outline-danger bg-body w-100'
+        //         },
+        //         confirmButtonColor: '#d33',
+        //         cancelButtonColor: '#3085d6',
+        //         confirmButtonText: 'حذف',
+        //         cancelButtonText: 'إلغاء'
+        //     }).then((result) => {
+        //         if (result.isConfirmed) {
+        //             Swal.fire(
+        //                 'تم الحذف!',
+        //                 'لقد تم حذف العنصر بنجاح.',
+        //                 'success'
+        //             );
+        //         }
+        //     });
+        // };
+
+        const buttons = document.querySelectorAll('.submitOrder');
+
+        // إضافة حدث click لكل زر
+        buttons.forEach(button => {
+            button.onclick = function () {
+                // إغلاق الـ Modal
+                closeAllModals();
+
+
+                console.log('ll');
+                // تشغيل SweetAlert2
+                Swal.fire({
+                    title: 'تم الحفظ بنجاح!',
+                    text: 'هذا النص هو مثال نص تجريبي يمكن أن يستبدل في نفس المساحة. لقد تم توليد هذا النص من مولد النص العربي.',
+                    icon: 'success',
+                    // showCancelButton: true,
+                    confirmButtonText: 'شكرا',
+                    // cancelButtonText: 'شكرا',
+                    customClass: {
+                        confirmButton: 'btn btn-primary w-100',
+                        cancelButton: 'btn btn-outline-primary w-100'
+                    }
+                })
+            };
+        })
+
+        // إغلاق جميع الموديلات
+        function closeAllModals() {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modalElement => {
+                const modalInstance = bootstrap.Modal.getInstance(modalElement);
+                if (modalInstance) {
+                    modalInstance.hide();
+                }
+            });
+        }
+    </script>
+    <!--  -->
+
+    <script src="js/argon-dashboard.min.js"></script>
+</body>
+
+</html>
