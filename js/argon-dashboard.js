@@ -401,7 +401,10 @@ let html = document.getElementsByTagName('html')[0];
 
 html.addEventListener("click", function(e) {
   if (body.classList.contains('g-sidenav-pinned') && !e.target.classList.contains('sidenav-toggler-line')) {
-    body.classList.remove(className);
+        // تحقق مما إذا كان الهدف ليس السايد بار أو أحد الروابط ذات الكلاس SideCollapse
+        if (!e.target.closest('#sidenav-main') || !e.target.classList.contains('SideCollapse')) {
+          body.classList.remove(className);
+        }
   }
 });
 
