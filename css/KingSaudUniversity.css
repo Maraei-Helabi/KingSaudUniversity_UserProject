@@ -630,7 +630,24 @@ btn-primary:not(:disabled):not(.disabled).active,
 .bg-warning {
     background-color: #f6b014 !important;
 }
-
+.ps__rail-x {
+    display: none !important;
+    position: relative !important;
+    overflow: hidden;
+}
+.ps__rail-y {
+    display: none !important;
+    position: relative !important;
+    overflow: hidden;
+}
+.AdminAside + .main-content {
+    background: #fff;
+}
+@media (max-width: 480px) {
+	.AdminAside + .main-content .mainContainer.max {
+		margin-top: 82px !important;
+	}
+}
 @media (min-width: 1200px) {
 	.sidenav.fixed-end > .main-content {
 		margin-right: 17.125rem;
