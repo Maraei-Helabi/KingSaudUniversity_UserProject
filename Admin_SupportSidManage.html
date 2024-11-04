@@ -18,8 +18,9 @@
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <link href="css/all.min.css" rel="stylesheet" type="text/css">
+
     <!-- sweetalert2 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="css/plugins/sweetalert2.min.css">
 
     <!-- CSS Files -->
     <link id="pagestyle" href="css/argon-dashboard.css" rel="stylesheet" />
@@ -64,7 +65,7 @@
                         <span class="nav-link-text me-1">تهيئة النظام</span>
                     </a>
                 </li>
-                <div class="collapse" id="collapseExample"  data-bs-parent="#sidenav-main">
+                <div class="collapse" id="collapseExample" data-bs-parent="#sidenav-main">
                     <div class="pe-3">
                         <li class="nav-item">
                             <a class="nav-link" href="/Admin_Managed.html">
@@ -130,7 +131,8 @@
                         aria-expanded="false" aria-controls="collapseExample2">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
-                            <i class="fa-solid fa-folder-open"></i>                        </div>
+                            <i class="fa-solid fa-folder-open"></i>
+                        </div>
                         <span class="nav-link-text me-1">الطلبات</span>
                     </a>
                 </li>
@@ -179,7 +181,8 @@
                         aria-expanded="false" aria-controls="collapseExample3">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
-                            <i class="fa-solid fa-user-group"></i>                        </div>
+                            <i class="fa-solid fa-user-group"></i>
+                        </div>
                         <span class="nav-link-text me-1">العوائل و الاستقدام</span>
                     </a>
                 </li>
@@ -217,7 +220,8 @@
                         aria-expanded="false" aria-controls="collapseExample4">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
-                            <i class="fa-solid fa-plane"></i>                        </div>
+                            <i class="fa-solid fa-plane"></i>
+                        </div>
                         <span class="nav-link-text me-1">تذاكر الطيران</span>
                     </a>
                 </li>
@@ -264,7 +268,8 @@
                     <a class="nav-link " href="/Admin_PrintingInformation.html">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
-                            <i class="fa-solid fa-print"></i>                        </div>
+                            <i class="fa-solid fa-print"></i>
+                        </div>
                         <span class="nav-link-text me-1">طباعة الافادات</span>
                     </a>
                 </li>
@@ -275,7 +280,8 @@
                         aria-expanded="false" aria-controls="collapseExample5">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
-                            <i class="fa-solid fa-book"></i>                        </div>
+                            <i class="fa-solid fa-book"></i>
+                        </div>
                         <span class="nav-link-text me-1">تقارير واستعلامات</span>
                     </a>
                 </li>
@@ -476,25 +482,14 @@
                                     <td class="align-middle text-center d-flex gap-1 justify-content-center">
                                         <a class="btn btn-outline-warning mb-0 px-2 py-2" data-bs-toggle="modal"
                                             data-bs-target="#editModal">
-                                            <svg class="svg-inline--fa fa-pencil ms-1 text-warning" aria-hidden="true"
-                                                focusable="false" data-prefix="fas" data-icon="pencil" role="img"
-                                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                                                data-fa-i2svg="">
-                                                <path fill="currentColor"
-                                                    d="M421.7 220.3l-11.3 11.3-22.6 22.6-205 205c-6.6 6.6-14.8 11.5-23.8 14.1L30.8 511c-8.4 2.5-17.5 .2-23.7-6.1S-1.5 489.7 1 481.2L38.7 353.1c2.6-9 7.5-17.2 14.1-23.8l205-205 22.6-22.6 11.3-11.3 33.9 33.9 62.1 62.1 33.9 33.9zM96 353.9l-9.3 9.3c-.9 .9-1.6 2.1-2 3.4l-25.3 86 86-25.3c1.3-.4 2.5-1.1 3.4-2l9.3-9.3H112c-8.8 0-16-7.2-16-16V353.9zM453.3 19.3l39.4 39.4c25 25 25 65.5 0 90.5l-14.5 14.5-22.6 22.6-11.3 11.3-33.9-33.9-62.1-62.1L314.3 67.7l11.3-11.3 22.6-22.6 14.5-14.5c25-25 65.5-25 90.5 0z">
-                                                </path>
-                                            </svg><!-- <i class="fa-solid fa-pencil ms-1 text-warning" aria-hidden="true"></i> Font Awesome fontawesome.com -->
+                                            <i class="fa-solid fa-pencil ms-1 text-warning" aria-hidden="true"></i>
                                             تعديل
                                         </a>
-                                        <a class="btn btn-outline-danger mb-0 px-2 py-2 text-danger"
-                                            id="confirmDelete"><svg class="svg-inline--fa fa-trash-can ms-2"
-                                                aria-hidden="true" focusable="false" data-prefix="far"
-                                                data-icon="trash-can" role="img" xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 448 512" data-fa-i2svg="">
-                                                <path fill="currentColor"
-                                                    d="M160 400C160 408.8 152.8 416 144 416C135.2 416 128 408.8 128 400V192C128 183.2 135.2 176 144 176C152.8 176 160 183.2 160 192V400zM240 400C240 408.8 232.8 416 224 416C215.2 416 208 408.8 208 400V192C208 183.2 215.2 176 224 176C232.8 176 240 183.2 240 192V400zM320 400C320 408.8 312.8 416 304 416C295.2 416 288 408.8 288 400V192C288 183.2 295.2 176 304 176C312.8 176 320 183.2 320 192V400zM317.5 24.94L354.2 80H424C437.3 80 448 90.75 448 104C448 117.3 437.3 128 424 128H416V432C416 476.2 380.2 512 336 512H112C67.82 512 32 476.2 32 432V128H24C10.75 128 0 117.3 0 104C0 90.75 10.75 80 24 80H93.82L130.5 24.94C140.9 9.357 158.4 0 177.1 0H270.9C289.6 0 307.1 9.358 317.5 24.94H317.5zM151.5 80H296.5L277.5 51.56C276 49.34 273.5 48 270.9 48H177.1C174.5 48 171.1 49.34 170.5 51.56L151.5 80zM80 432C80 449.7 94.33 464 112 464H336C353.7 464 368 449.7 368 432V128H80V432z">
-                                                </path>
-                                            </svg><!-- <i class="far fa-trash-alt ms-2" aria-hidden="true"></i> Font Awesome fontawesome.com -->حذف
+
+                                        <a class="btn btn-outline-danger mb-0 px-2 py-2 text-danger confirmDelete"
+                                            id="confirmDelete" data-title="هل أنت متأكد من الحذف؟"
+                                            data-text="هذا النص هو مثال نص تجريبي يمكن أن يستبدل في نفس المساحة. لقد تم توليد هذا النص من مولد النص العربي.">
+                                            <i class="far fa-trash-alt ms-2" aria-hidden="true"></i> حذف
                                         </a>
 
                                     </td>
@@ -713,35 +708,62 @@
     <script src="js/all.min.js"></script>
     <script src="js/core/bootstrap.min.js"></script>
     <!-- sweetalert2 -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="js/plugins/sweetalert2.min.js"></script>
     <script>
-        document.getElementById('confirmDelete').onclick = function () {
-            Swal.fire({
-                title: 'هل أنت متأكد من الحذف؟',
-                text: 'هذا النص هو مثال نص تجريبي يمكن أن يستبدل في نفس المساحة. لقد تم توليد هذا النص من مولد النص العربي.',
-                icon: 'warning',
-                showCancelButton: true,
-                customClass: {
-                    confirmButton: 'btn btn-danger w-100',
-                    cancelButton: 'btn btn-outline-danger bg-body w-100'
-                },
-                confirmButtonColor: '#d33',
-                cancelButtonColor: '#3085d6',
-                confirmButtonText: 'حذف',
-                cancelButtonText: 'إلغاء'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    Swal.fire(
-                        'تم الحذف!',
-                        'لقد تم حذف العنصر بنجاح.',
-                        'success'
-                    );
-                }
-            });
-        };
+
+        // نافذة زر الحذف
+        document.querySelectorAll('.confirmDelete').forEach(DelBtn => {
+            DelBtn.onclick = function () {
+                Swal.fire({
+                    title: this.getAttribute('data-title'),
+                    text: this.getAttribute('data-text'),
+                    icon: 'warning',
+                    showCancelButton: true,
+                    customClass: {
+                        confirmButton: 'btn btn-danger w-100',
+                        cancelButton: 'btn btn-outline-danger bg-body w-100'
+                    },
+                    confirmButtonColor: '#d33',
+                    cancelButtonColor: '#3085d6',
+                    confirmButtonText: 'حذف',
+                    cancelButtonText: 'إلغاء'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+
+                        Swal.fire(
+                            'تم الحذف!',
+                            'لقد تم حذف العنصر بنجاح.',
+                            'success'
+                        );
+
+                        // إرسال طلب DELETE إلى API
+                        // يمكنك استخدام هذا الكود
+                        /*
+                        fetch(`/api/YourControllerName/DeleteItem/${itemId}`, {
+                            method: 'DELETE',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            }
+                        })
+                            .then(response => {
+                                if (response.ok) {
+                                    Swal.fire('تم الحذف!', 'لقد تم حذف العنصر بنجاح.', 'success');
+                                } else {
+                                    Swal.fire('خطأ!', 'حدث خطأ أثناء عملية الحذف.', 'error');
+                                }
+                            })
+                            .catch(error => {
+                                Swal.fire('خطأ!', 'تعذر الاتصال بالخادم.', 'error');
+                                console.error('Error:', error);
+                            });
+
+                            */
+                    }
+                });
+            };
+        });
 
         const buttons = document.querySelectorAll('.submitOrder');
-
         // إضافة حدث click لكل زر
         buttons.forEach(button => {
             button.onclick = function () {
@@ -749,7 +771,6 @@
                 closeAllModals();
 
 
-                console.log('ll');
                 // تشغيل SweetAlert2
                 Swal.fire({
                     title: 'تم الحفظ بنجاح!',
