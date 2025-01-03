@@ -845,30 +845,38 @@
     <!-- sweetalert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
     <script>
-        // document.getElementById('confirmDelete').onclick = function () {
-        //     Swal.fire({
-        //         title: 'هل أنت متأكد من الحذف؟',
-        //         text: 'هذا النص هو مثال نص تجريبي يمكن أن يستبدل في نفس المساحة. لقد تم توليد هذا النص من مولد النص العربي.',
-        //         icon: 'warning',
-        //         showCancelButton: true,
-        //         customClass: {
-        //             confirmButton: 'btn btn-danger w-100',
-        //             cancelButton: 'btn btn-outline-danger bg-body w-100'
-        //         },
-        //         confirmButtonColor: '#d33',
-        //         cancelButtonColor: '#3085d6',
-        //         confirmButtonText: 'حذف',
-        //         cancelButtonText: 'إلغاء'
-        //     }).then((result) => {
-        //         if (result.isConfirmed) {
-        //             Swal.fire(
-        //                 'تم الحذف!',
-        //                 'لقد تم حذف العنصر بنجاح.',
-        //                 'success'
-        //             );
-        //         }
-        //     });
-        // };
+  // تحديد جميع الأزرار التي تحتوي على الكلاس 'deleteOrder'
+  const deleteButtons = document.querySelectorAll('.deleteOrder');
+
+// إضافة حدث click لكل زر
+deleteButtons?.forEach(button => {
+    button.onclick = function () {
+        // تشغيل SweetAlert2
+        Swal.fire({
+            title: 'هل أنت متأكد من الحذف؟',
+            text: 'هذا النص هو مثال نص تجريبي يمكن أن يستبدل في نفس المساحة. لقد تم توليد هذا النص من مولد النص العربي.',
+            icon: 'warning',
+            showCancelButton: true,
+            customClass: {
+                confirmButton: 'btn btn-danger w-100',
+                cancelButton: 'btn btn-outline-danger bg-body w-100'
+            },
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'حذف',
+            cancelButtonText: 'إلغاء'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                    'تم الحذف!',
+                    'لقد تم حذف العنصر بنجاح.',
+                    'success'
+                );
+            }
+        });
+    };
+});
+
 
         const buttons = document.querySelectorAll('.submitOrder');
 
