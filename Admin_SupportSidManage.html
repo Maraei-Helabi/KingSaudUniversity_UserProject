@@ -773,8 +773,8 @@
 
                 // تشغيل SweetAlert2
                 Swal.fire({
-                    title: 'تم الحفظ بنجاح!',
-                    text: 'هذا النص هو مثال نص تجريبي يمكن أن يستبدل في نفس المساحة. لقد تم توليد هذا النص من مولد النص العربي.',
+                    title: this.getAttribute('data-title'),
+                    text: this.getAttribute('data-text'),
                     icon: 'success',
                     // showCancelButton: true,
                     confirmButtonText: 'شكرا',
