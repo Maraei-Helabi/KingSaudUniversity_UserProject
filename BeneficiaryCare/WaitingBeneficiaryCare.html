@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png"> -->
+    <title>
+        KingSaudUniversity
+    </title>
+    <!--     Fonts and icons     -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="../css/all.min.css" rel="stylesheet" type="text/css">
+    <!-- sweetalert2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+    <!-- CSS Files -->
+    <link id="pagestyle" href="../css/argon-dashboard.css" rel="stylesheet" />
+    <link href="../css/KingSaudUniversity.css" rel="stylesheet">
+</head>
+
+<body class="g-sidenav-show rtl  bg-gray-100">
+    <!-- يعمل باك قراون ازرق -->
+    <!-- <div class="min-height-300 bg-primary position-absolute w-100"></div> -->
+    <aside
+        class="AdminAside sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-2 fixed-end me-4 rotate-caret align-content-between d-flex"
+        id="sidenav-main">
+        <div class="sidenav-header w-100">
+            <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute start-0 top-0 d-none d-xl-none"
+                aria-hidden="true" id="iconSidenav"></i>
+            <a class="navbar-brand m-0 p-0 h-100" href="/Admin_Index.html" target="_blank">
+                <img src="imgs/جامعة الملك سعود (1).png" class="navbar-brand-img h-100 w-100 max-height-100"
+                    alt="main_logo">
+            </a>
+        </div>
+        <hr class="horizontal dark mt-0">
+        <div class="collapse navbar-collapse px-0 w-auto " id="sidenav-collapse-main">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/Admin_Index.html">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-house-user"></i>
+                        </div>
+                        <span class="nav-link-text me-1">الرئيسية</span>
+                    </a>
+                </li>
+                <!-- كلابس -->
+
+                <li class="nav-item">
+                    <a class="nav-link SideCollapse" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                        aria-expanded="false" aria-controls="collapseExample">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
+                        <span class="nav-link-text me-1">تهيئة النظام</span>
+                    </a>
+                </li>
+                <div class="collapse" id="collapseExample" data-bs-parent="#sidenav-main">
+                    <div class="pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_Managed.html">
+                                <!-- <div
+                                    class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-chart-column"></i>
+                                </div> -->
+                                <span class="nav-link-text me-1"> الادارات</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_UserManage.html">
+                                <!-- <div
+                                    class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-chart-column"></i>
+                                </div> -->
+                                <span class="nav-link-text me-1"> ادارة المستخدمين</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_ProgrameManage.html">
+                                <!-- <div
+                                    class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-chart-column"></i>
+                                </div> -->
+                                <span class="nav-link-text me-1"> ادارة البرامج</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_ActivtyManage.html">
+                                <!-- <div
+                                    class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-chart-column"></i>
+                                </div> -->
+                                <span class="nav-link-text me-1"> ادارة الخدمات</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_YearsManage.html">
+                                <!-- <div
+                                    class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-chart-column"></i>
+                                </div> -->
+                                <span class="nav-link-text me-1"> ادارة السنوات الدراسية</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_SupportSidManage.html">
+                                <!-- <div
+                                    class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                                    <i class="fa-solid fa-chart-column"></i>
+                                </div> -->
+                                <span class="nav-link-text me-1"> الدعم من الجهات المانحة</span>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                <!-- كلابس -->
+
+                <!-- كلابس -->
+                <li class="nav-item">
+                    <a class="nav-link SideCollapse" data-bs-toggle="collapse" href="#collapseExample2" role="button"
+                        aria-expanded="false" aria-controls="collapseExample2">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-folder-open"></i>
+                        </div>
+                        <span class="nav-link-text me-1">الطلبات</span>
+                    </a>
+                </li>
+                <div class="collapse" id="collapseExample2" data-bs-parent="#sidenav-main">
+                    <div class="pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_AllOrder.html">
+                                <span class="nav-link-text me-1"> كل الطلبات</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_InternationalStudOrder.html">
+
+                                <span class="nav-link-text me-1"> الطلبة الدوليين</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_CharitBoxOrder.html">
+                                <span class="nav-link-text me-1"> الصندوق الخيري</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_MoneyManageOrder.html">
+
+                                <span class="nav-link-text me-1"> المدير المالي</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_BankTransferFileOrder.html">
+                                <span class="nav-link-text me-1"> ملفات التحويلات</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_BankTransferFileOrder.html">
+
+                                <span class="nav-link-text me-1"> التحويلات البنكية</span>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                <!-- كلابس -->
+
+                <!-- كلابس -->
+                <li class="nav-item">
+                    <a class="nav-link SideCollapse" data-bs-toggle="collapse" href="#collapseExample3" role="button"
+                        aria-expanded="false" aria-controls="collapseExample3">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-user-group"></i>
+                        </div>
+                        <span class="nav-link-text me-1">العوائل و الاستقدام</span>
+                    </a>
+                </li>
+                <div class="collapse" id="collapseExample3" data-bs-parent="#sidenav-main">
+                    <div class="pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_FamilyDependFamies.html">
+                                <span class="nav-link-text me-1">اعتماد العوائل</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_FamilyIsDependFamies.html">
+
+                                <span class="nav-link-text me-1"> العوائل المعتمدة</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_FamilyDustressedFamies.html">
+                                <span class="nav-link-text me-1"> العوائل المتعثره</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_FamilyRefreshFamies.html">
+
+                                <span class="nav-link-text me-1"> تحديث بيانات العوائل</span>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                <!-- كلابس -->
+
+                <!-- كلابس -->
+                <li class="nav-item">
+                    <a class="nav-link SideCollapse" data-bs-toggle="collapse" href="#collapseExample4" role="button"
+                        aria-expanded="false" aria-controls="collapseExample4">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-plane"></i>
+                        </div>
+                        <span class="nav-link-text me-1">تذاكر الطيران</span>
+                    </a>
+                </li>
+                <div class="collapse" id="collapseExample4" data-bs-parent="#sidenav-main">
+                    <div class="pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_OrganizersTickets.html">
+                                <span class="nav-link-text me-1"> اعتماد تذاكر المنظمين</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_UnOrganizersTickets.html">
+
+                                <span class="nav-link-text me-1"> اعتماد تذاكر الغير منظمين</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_ConfirmTickets.html">
+                                <span class="nav-link-text me-1"> التذاكر المؤكدة</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_ConfirmTickets.html">
+
+                                <span class="nav-link-text me-1"> التذاكر المعتمدة</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_VisasTickets.html">
+                                <span class="nav-link-text me-1"> التاشيرات المعتمدة</span>
+                            </a>
+                        </li>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_RideOrderTickets.html">
+                                <span class="nav-link-text me-1"> امر اركاب</span>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                <!-- كلابس -->
+
+                <li class="nav-item">
+                    <a class="nav-link " href="/Admin_PrintingInformation.html">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-print"></i>
+                        </div>
+                        <span class="nav-link-text me-1">طباعة الافادات</span>
+                    </a>
+                </li>
+
+                <!-- كلابس -->
+                <li class="nav-item">
+                    <a class="nav-link SideCollapse" data-bs-toggle="collapse" href="#collapseExample5" role="button"
+                        aria-expanded="false" aria-controls="collapseExample5">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center ms-2 d-flex align-items-center justify-content-center">
+                            <i class="fa-solid fa-book"></i>
+                        </div>
+                        <span class="nav-link-text me-1">تقارير واستعلامات</span>
+                    </a>
+                </li>
+                <div class="collapse" id="collapseExample5" data-bs-parent="#sidenav-main">
+                    <div class="pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_StudentDtataReports.html">
+                                <span class="nav-link-text me-1"> بيانات الطلبة الدوليين</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_ProgramStatistiaclReport.html">
+
+                                <span class="nav-link-text me-1"> تقرير احصائي للبرامج و الانشطة</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_ProgramDetailsReport.html">
+                                <span class="nav-link-text me-1"> تقرير تفصيلي للبرامج و الانشطة</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_MoneyStatisticalReport.html">
+
+                                <span class="nav-link-text me-1"> تقرير احصائي مالي</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Admin_MoneyDetailsReport.html">
+                                <span class="nav-link-text me-1"> تقرير تفصيلي مالي</span>
+                            </a>
+                        </li>
+                    </div>
+                </div>
+                <!-- كلابس -->
+
+
+            </ul>
+        </div>
+        <div class="sidenav-footer mx-3 w-100">
+            <a href="/LogIn.html" class="btn btn-reddit mb-3 w-100">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span class="me-1">تسجيل خروج</span>
+            </a>
+        </div>
+    </aside>
+
+
+    <main class="main-contentAdmin main-content position-relative border-radius-lg overflow-hidden">
+        <!-- Navbar -->
+        <nav class="  navbar navbar-main navbar-expand-lg py-1 px-0 m-2 shadow-none border-radius-xl position-sticky bg-white left-auto top-2 z-index-sticky bg-gradient-dark"
+            id="navbarBlur" data-scroll="false">
+            <div class="container-fluid px-3">
+                <div class="navbar-nav navContent">
+                    <div class="nav-item d-xl-none pe-3 d-flex align-items-center">
+                        <a href="javascript:;" class="nav-link text-white p-0" id="iconNavbarSidenav">
+                            <div class="sidenav-toggler-inner">
+                                <i class="sidenav-toggler-line bg-white"></i>
+                                <i class="sidenav-toggler-line bg-white"></i>
+                                <i class="sidenav-toggler-line bg-white"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <img class="d-xl-none d-block" src="imgs/Imamu/Imamu_sec_logo-01.png" style="
+    height: 60px;">
+                    <div class="align-items-center d-flex gap-4">
+                        <div class="nav-item navDrop dropdown pt-1 d-flex align-items-center">
+
+                            <!--  -->
+                            <a href="javascript:;" class="nav-link text-white p-0" id="dropdownMenuButton"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-bell cursor-pointer" style="font-size: 20px;"></i>
+                            </a>
+                            <ul class="dropdown-menu  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton"
+                                style="width: 300px;">
+                                <li class="mb-2">
+                                    <a class="dropdown-item border-radius-md p-1" href="javascript:;">
+                                        <div class="d-flex py-1">
+                                            <div class="my-auto">
+                                                <img src="imgs/nutyimage.png" class="avatar avatar-sm  ms-2 ">
+                                            </div>
+                                            <div class="d-flex flex-column justify-content-center w-100">
+                                                <h6
+                                                    class="text-sm font-weight-normal mb-1 d-flex justify-content-between align-items-center">
+                                                    <span class="font-weight-bold MainColor">تم قبول طلبكم رقم7</span>
+                                                    <p class="text-xs text-secondary mb-0">
+                                                        <i class="fa fa-clock me-1"></i>
+                                                        منذ 12 ساعة
+                                                    </p>
+                                                </h6>
+                                                <p class="text-xs mb-0 text-end font-weight-bold">
+                                                    تم قبول طلبكم من قبل الادارة
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="nav-item navDrop d-flex align-items-center">
+                            <a href="javascript:;" class="nav-link text-white font-weight-bold px-0">
+                                <!-- <i class="fa fa-user me-sm-1"></i> -->
+                                <img src="imgs/team-3.jpg" class="userAvatar avatar avatar-sm m-0 ms-1">
+                                <span class="d-sm-inline d-none">عمر عبدالعزيز</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navb ar -->
+
+        <div class="max mainContainer container-fluid  border-radius-xl p-2">
+
+            <h2 class="pageTitle mb-1 mt-2 px-2">المراسلات</h2>
+            <p class="px-2 mb-5 cursor-pointer"><span><i class="fa-solid fa-house"></i> الرئسية / الطلبات /</span><span
+                    class="MainColor font-weight-bold">المراسلات</span></p>
+
+            <!--  -->
+            <div class="card tabsCard p-2 mt-4 mv-2">
+
+                <ul class="nav nav-tabs nav nav-pills nav-fill p-1 flex-row bgGray" role="tablist">
+                    <li class="nav-item mx-1" role="presentation">
+                        <a class="nav-link active" id="simple-tab-0" data-bs-toggle="tab" href="#simple-tabpanel-0"
+                            role="tab" aria-controls="simple-tabpanel-0" aria-selected="true">قيد الانتظار <span
+                                class="badge px-2 bgSecound">7</span></a>
+                    </li>
+                    <li class="nav-item mx-1" role="presentation">
+                        <a class="nav-link" id="simple-tab-1" data-bs-toggle="tab" href="#simple-tabpanel-1" role="tab"
+                            aria-controls="simple-tabpanel-1" aria-selected="false">النشطه <span
+                                class="badge bg-success px-2">4</span></a>
+                    </li>
+                    <li class="nav-item mx-1" role="presentation">
+                        <a class="nav-link" id="simple-tab-2" data-bs-toggle="tab" href="#simple-tabpanel-2" role="tab"
+                            aria-controls="simple-tabpanel-2" aria-selected="false">مغلقه <span
+                                class="badge bg-danger px-2">4</span></a>
+                    </li>
+                </ul>
+
+                <div class="tab-content mt-4" id="tab-content">
+
+                    <div class="tab-pane active" id="simple-tabpanel-0" role="tabpanel" aria-labelledby="simple-tab-0">
+
+                        <!-- الفلتره -->
+                        <div class="card mb-3 bgWhite">
+                            <div class="filteringContiner row p-2 gap-2 gap-sm-0">
+                                <div class="col-12 col-sm-6 col-md-7">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i
+                                                class="fa-solid fa-magnifying-glass"></i></span>
+                                        <input class="form-control" placeholder="بحث" type="text">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-3">
+                                    <div class="d-flex gap-5 d-md-block">
+                                        <button type="button" class="btn btn-outline-primary mb-0 w-100"
+                                            data-bs-toggle="modal" data-bs-target="#filterModal">
+                                            <i class="fa-solid fa-filter"></i>
+                                            <span>فلترة</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-3 col-md-2">
+                                    <a id="exportToExcel" class="btn btn-outline-primary w-100 mb-0"
+                                        onclick="ExportTableToExxel('studentDate1')">
+                                        <i class="fa-solid fa-download  ms-2 WhiteColo"></i>
+                                        تصدير</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- الجدول -->
+                        <div class="card mb-3 overflow-hidden">
+                            <!-- <div class="card-header pb-0">
+            </div> -->
+                            <div class="card-body pb-2 pt-0 px-0">
+                                <div class="table-responsive p-0">
+                                    <table id="studentDate1" class="customTable table align-items-center mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th
+                                                    class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    م</th>
+                                                <th
+                                                    class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                                    رقم الطالب</th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    الرقم الجامعي</th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    رقم الاقامة</th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    اسم الطالب</th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    الجوال </th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    الجنسية
+                                                </th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    الخدمة</th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    تاريخ الطلب</th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    تاريخ اخر تعديل</th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    المبلغ المعتمد</th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    الموظف</th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    ملاحظة الموظف</th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    نوع المنحة</th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    الاجرائات</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    1
+                                                </td>
+                                                <td>
+                                                    مرعي علي بن هلابي
+                                                </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    2020 </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    2030 </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    2030 </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    2030 </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    2030 </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    2030 </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    2030 </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    2030 </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    2030 </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    2030 </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    2030 </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    2030 </td>
+                                                <td
+                                                    class="align-middle text-center d-flex gap-1 justify-content-center">
+                                                    <a class="btn btn-outline-main mb-0 px-2 py-2"
+                                                        href="Admin_AllOrder(info).html">
+                                                        <i class="fa-solid fa-circle-info ms-1"></i>
+                                                        اتخاذ اجراء
+                                                    </a>
+
+
+                                                </td>
+                                            </tr>
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- البجنيشن -->
+                        <div class="paginationConrainer">
+                            <div
+                                class="nav nav-tabs nav nav-pills nav-fill p-1 flex-row bgGray justify-content-between">
+                                <div class="numOfPage d-flex align-content-center gap-2">
+                                    <span class="text-dark">عدد العناصر:</span>
+                                    <select class="customSelect form-select form-select-sm w-auto pe-4 ps-2 "
+                                        aria-label="Small select example">
+                                        <option value="1">10</option>
+                                        <option value="2">20</option>
+                                        <option value="3">30</option>
+                                    </select>
+                                </div>
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination mb-0">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane" id="simple-tabpanel-1" role="tabpanel" aria-labelledby="simple-tab-1">
+
+                        <div class="container">
+                            <div class="row">
+
+                                <section class="discussions">
+                                    <div class="discussion search">
+                                        <div class="searchbar">
+                                            <i class="fa fa-search" aria-hidden="true"></i>
+                                            <input type="text" placeholder="Search..."></input>
+                                        </div>
+                                    </div>
+                                    <div class="discussion message-active">
+                                        <div class="photo"
+                                            style="background-image: url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);">
+                                            <div class="online"></div>
+                                        </div>
+                                        <div class="desc-contact">
+                                            <p class="name">Megan Leib</p>
+                                            <p class="message">9 pm at the bar if possible 😳</p>
+                                        </div>
+                                        <div class="timer">12 sec</div>
+                                    </div>
+
+                                    <div class="discussion">
+                                        <div class="photo"
+                                            style="background-image: url(https://i.pinimg.com/originals/a9/26/52/a926525d966c9479c18d3b4f8e64b434.jpg);">
+                                            <div class="online"></div>
+                                        </div>
+                                        <div class="desc-contact">
+                                            <p class="name">Dave Corlew</p>
+                                            <p class="message">Let's meet for a coffee or something today ?</p>
+                                        </div>
+                                        <div class="timer">3 min</div>
+                                    </div>
+
+                                    <div class="discussion">
+                                        <div class="photo"
+                                            style="background-image: url(https://images.unsplash.com/photo-1497551060073-4c5ab6435f12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80);">
+                                        </div>
+                                        <div class="desc-contact">
+                                            <p class="name">Jerome Seiber</p>
+                                            <p class="message">I've sent you the annual report</p>
+                                        </div>
+                                        <div class="timer">42 min</div>
+                                    </div>
+
+                                    <div class="discussion">
+                                        <div class="photo"
+                                            style="background-image: url(https://card.thomasdaubenton.com/img/photo.jpg);">
+                                            <div class="online"></div>
+                                        </div>
+                                        <div class="desc-contact">
+                                            <p class="name">Thomas Dbtn</p>
+                                            <p class="message">See you tomorrow ! 🙂</p>
+                                        </div>
+                                        <div class="timer">2 hour</div>
+                                    </div>
+
+                                    <div class="discussion">
+                                        <div class="photo"
+                                            style="background-image: url(https://images.unsplash.com/photo-1553514029-1318c9127859?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80);">
+                                        </div>
+                                        <div class="desc-contact">
+                                            <p class="name">Elsie Amador</p>
+                                            <p class="message">What the f**k is going on ?</p>
+                                        </div>
+                                        <div class="timer">1 day</div>
+                                    </div>
+
+                                    <div class="discussion">
+                                        <div class="photo"
+                                            style="background-image: url(https://images.unsplash.com/photo-1541747157478-3222166cf342?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=967&q=80);">
+                                        </div>
+                                        <div class="desc-contact">
+                                            <p class="name">Billy Southard</p>
+                                            <p class="message">Ahahah 😂</p>
+                                        </div>
+                                        <div class="timer">4 days</div>
+                                    </div>
+
+                                    <div class="discussion">
+                                        <div class="photo"
+                                            style="background-image: url(https://images.unsplash.com/photo-1435348773030-a1d74f568bc2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80);">
+                                            <div class="online"></div>
+                                        </div>
+                                        <div class="desc-contact">
+                                            <p class="name">Paul Walker</p>
+                                            <p class="message">You can't see me</p>
+                                        </div>
+                                        <div class="timer">1 week</div>
+                                    </div>
+                                </section>
+                                <section class="chat">
+                                    <div class="header-chat">
+                                        <i class="icon fa fa-user-o" aria-hidden="true"></i>
+                                        <p class="name">Megan Leib</p>
+                                        <i class="icon clickable fa fa-ellipsis-h right" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="messages-chat">
+                                        <div class="message">
+                                            <div class="photo"
+                                                style="background-image: url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);">
+                                            </div>
+                                            <p class="text"> Hi, how are you ? </p>
+                                        </div>
+                                        <div class="message text-only">
+                                            <p class="text"> What are you doing tonight ? Want to go take a drink ?</p>
+                                        </div>
+                                        <p class="time"> 14h58</p>
+                                        <div class="message text-only">
+                                            <div class="response">
+                                                <p class="text"> Hey Megan ! It's been a while 😃</p>
+                                                <div class="photo"
+                                                    style="background-image: url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="message">
+                                            <div class="response">
+                                                <p class="text"> When can we meet ?</p>
+                                            </div>
+                                        </div>
+                                        <p class=" time"> 15h04</p>
+                                        <div class="message">
+                                            <div class="photo"
+                                                style="background-image: url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);">
+                                            </div>
+                                            <p class="text"> 9 pm at the bar if possible 😳</p>
+                                        </div>
+                                        <p class="time"> 15h09</p>
+                                    </div>
+                                    <div class="footer-chat">
+                                        <i class="icon fa fa-smile-o clickable" style="font-size:25pt;"
+                                            aria-hidden="true"></i>
+                                        <input type="text" class="write-message"
+                                            placeholder="Type your message here"></input>
+                                        <i class="icon send fa fa-paper-plane-o clickable" aria-hidden="true"></i>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+
+                        <style>
+                            .container {
+                                padding: 0;
+                                background-color: #FFF;
+                                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+                                height: 700px;
+                            }
+
+                            /* === CONVERSATIONS === */
+
+                            .discussions {
+                                width: 35%;
+                                height: 700px;
+                                box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.20);
+                                overflow: scroll;
+                                /* background-color: #87a3ec; */
+                                display: inline-block;
+                                padding: 0;
+                                /* padding-right: 10px; */
+                                border-right: 6px solid var(--second-color);
+                            }
+
+                            .discussions .discussion {
+                                width: 100%;
+                                height: 90px;
+                                background-color: #FAFAFA;
+                                border-bottom: solid 1px #E0E0E0;
+                                display: flex;
+                                align-items: center;
+                                cursor: pointer;
+                            }
+
+                            .discussions .search {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: #E0E0E0;
+                            }
+
+                            .discussions .search .searchbar {
+                                height: 40px;
+                                background-color: #FFF;
+                                width: 70%;
+                                padding: 0 20px;
+                                border-radius: 50px;
+                                border: 1px solid #EEEEEE;
+                                display: flex;
+                                align-items: center;
+                                cursor: pointer;
+                            }
+
+                            .discussions .search .searchbar input {
+                                margin-left: 15px;
+                                height: 38px;
+                                width: 100%;
+                                border: none;
+                                font-family: 'Montserrat', sans-serif;
+                                ;
+                            }
+
+                            .discussions .search .searchbar *::-webkit-input-placeholder {
+                                color: #E0E0E0;
+                            }
+
+                            .discussions .search .searchbar input *:-moz-placeholder {
+                                color: #E0E0E0;
+                            }
+
+                            .discussions .search .searchbar input *::-moz-placeholder {
+                                color: #E0E0E0;
+                            }
+
+                            .discussions .search .searchbar input *:-ms-input-placeholder {
+                                color: #E0E0E0;
+                            }
+
+                            .discussions .message-active {
+                                width: 98.5%;
+                                height: 90px;
+                                background-color: #FFF;
+                                border-bottom: solid 1px #E0E0E0;
+                            }
+
+                            .discussions .discussion .photo {
+                                margin-left: 20px;
+                                display: block;
+                                width: 45px;
+                                height: 45px;
+                                background: #E6E7ED;
+                                -moz-border-radius: 50px;
+                                -webkit-border-radius: 50px;
+                                background-position: center;
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                            }
+
+                            .online {
+                                position: absolute;
+                                top: 30px;
+                                left: 35px;
+                                width: 13px;
+                                height: 13px;
+                                background-color: #8BC34A;
+                                border-radius: 13px;
+                                border: 3px solid #FAFAFA;
+                            }
+
+                            .desc-contact {
+                                height: 43px;
+                                width: 50%;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+
+                            .discussions .discussion .name {
+                                margin: 0 0 0 20px;
+                                font-family: 'Montserrat', sans-serif;
+                                font-size: 11pt;
+                                color: #515151;
+                            }
+
+                            .discussions .discussion .message {
+                                margin: 6px 0 0 20px;
+                                font-family: 'Montserrat', sans-serif;
+                                font-size: 9pt;
+                                color: #515151;
+                            }
+
+                            .timer {
+                                margin-left: 15%;
+                                font-family: 'Open Sans', sans-serif;
+                                font-size: 11px;
+                                padding: 3px 8px;
+                                color: #BBB;
+                                background-color: #FFF;
+                                border: 1px solid #E5E5E5;
+                                border-radius: 15px;
+                            }
+
+                            .chat {
+                                width: calc(73% - 85px);
+                            }
+
+                            .header-chat {
+                                background-color: #FFF;
+                                height: 90px;
+                                box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.100);
+                                display: flex;
+                                align-items: center;
+                            }
+
+                            .chat .header-chat .icon {
+                                margin-left: 30px;
+                                color: #515151;
+                                font-size: 14pt;
+                            }
+
+                            .chat .header-chat .name {
+                                margin: 0 0 0 20px;
+                                text-transform: uppercase;
+                                font-family: 'Montserrat', sans-serif;
+                                font-size: 13pt;
+                                color: #515151;
+                            }
+
+                            .chat .header-chat .right {
+                                position: absolute;
+                                right: 40px;
+                            }
+
+                            .chat .messages-chat {
+                                padding: 25px 15px;
+                            }
+
+                            .chat .messages-chat .message {
+                                display: flex;
+                                align-items: center;
+                                margin-bottom: 8px;
+                            }
+
+                            .chat .messages-chat .message .photo {
+                                position: relative;
+                                display: block;
+                                width: 45px;
+                                height: 45px;
+                                background: #E6E7ED;
+                                -moz-border-radius: 50px;
+                                -webkit-border-radius: 50px;
+                                background-position: center;
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                            }
+
+                            .chat .messages-chat .text {
+                                margin: 0 35px;
+                                background-color: #f6f6f6;
+                                padding: 15px;
+                                border-radius: 12px;
+                            }
+
+                            .text-only {
+                                margin-left: 45px;
+                            }
+
+                            .time {
+                                font-size: 10px;
+                                color: lightgrey;
+                                margin-bottom: 10px;
+                                margin-left: 85px;
+                            }
+
+                            .response-time {
+                                float: right;
+                                margin-right: 40px !important;
+                            }
+
+                            .response {
+                                float: right;
+                                /* margin-right: 0px !important; */
+                                /* margin-left: auto; */
+                                margin-right: auto;
+                                display: flex;
+                            }
+
+                            .response .text {
+                                background-color: #e3effd !important;
+                            }
+
+                            .footer-chat {
+                                width: calc(65% - 66px);
+                                height: 80px;
+                                display: flex;
+                                align-items: center;
+                                position: absolute;
+                                bottom: 0;
+                                background-color: transparent;
+                                border-top: 2px solid #EEE;
+
+                            }
+
+                            .chat .footer-chat .icon {
+                                margin-left: 30px;
+                                color: #C0C0C0;
+                                font-size: 14pt;
+                            }
+
+                            .chat .footer-chat .send {
+                                color: #fff;
+                                background-color: #4f6ebd;
+                                position: absolute;
+                                right: 50px;
+                                padding: 12px 12px 12px 12px;
+                                border-radius: 50px;
+                                font-size: 14pt;
+                            }
+
+                            .chat .footer-chat .name {
+                                margin: 0 0 0 20px;
+                                text-transform: uppercase;
+                                font-family: 'Montserrat', sans-serif;
+                                font-size: 13pt;
+                                color: #515151;
+                            }
+
+                            .chat .footer-chat .right {
+                                position: absolute;
+                                right: 40px;
+                            }
+
+                            .write-message {
+                                border: none !important;
+                                width: 60%;
+                                height: 50px;
+                                margin-left: 20px;
+                                padding: 10px;
+                            }
+
+                            .footer-chat *::-webkit-input-placeholder {
+                                color: #C0C0C0;
+                                font-size: 13pt;
+                            }
+
+                            .footer-chat input *:-moz-placeholder {
+                                color: #C0C0C0;
+                                font-size: 13pt;
+                            }
+
+                            .footer-chat input *::-moz-placeholder {
+                                color: #C0C0C0;
+                                font-size: 13pt;
+                                margin-left: 5px;
+                            }
+
+                            .footer-chat input *:-ms-input-placeholder {
+                                color: #C0C0C0;
+                                font-size: 13pt;
+                            }
+
+                            .clickable {
+                                cursor: pointer;
+                            }
+                        </style>
+                    </div>
+                    <div class="tab-pane" id="simple-tabpanel-2" role="tabpanel" aria-labelledby="simple-tab-2">
+
+                        <!-- الفلتره -->
+                        <div class="card mb-3 bgWhite">
+                            <div class="filteringContiner row p-2 gap-2 gap-sm-0">
+                                <div class="col-12 col-sm-6 col-md-7">
+                                    <div class="input-group">
+                                        <span class="input-group-text"><i
+                                                class="fa-solid fa-magnifying-glass"></i></span>
+                                        <input class="form-control" placeholder="بحث" type="text">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-3">
+                                    <div class="d-flex gap-5 d-md-block">
+                                        <button type="button" class="btn btn-outline-primary mb-0 w-100"
+                                            data-bs-toggle="modal" data-bs-target="#filterModal">
+                                            <i class="fa-solid fa-filter"></i>
+                                            <span>فلترة</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-3 col-md-2">
+                                    <a id="exportToExcel" class="btn btn-outline-primary w-100 mb-0"
+                                        onclick="ExportTableToExxel('studentDate3')">
+                                        <i class="fa-solid fa-download  ms-2 WhiteColo"></i>
+                                        تصدير</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- الجدول -->
+                        <div class="card mb-3 overflow-hidden">
+                            <!-- <div class="card-header pb-0">
+            </div> -->
+                            <div class="card-body pb-2 pt-0 px-0">
+                                <div class="table-responsive p-0">
+                                    <table id="studentDate3" class="customTable table align-items-center mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th
+                                                    class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    م</th>
+                                                <th
+                                                    class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                                    رقم الطالب</th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    الرقم الجامعي</th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    رقم الاقامة</th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    اسم الطالب</th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    الجوال </th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    الجنسية
+                                                </th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    الخدمة</th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    تاريخ الطلب</th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    تاريخ اخر تعديل</th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    المبلغ المعتمد</th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    الموظف</th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    ملاحظة الموظف</th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    نوع المنحة</th>
+                                                <th
+                                                    class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                    الاجرائات</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    1
+                                                </td>
+                                                <td>
+                                                    مرعي علي بن هلابي
+                                                </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    2020 </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    2030 </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    2030 </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    2030 </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    2030 </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    2030 </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    2030 </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    2030 </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    2030 </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    2030 </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    2030 </td>
+                                                <td class="align-middle text-center text-sm">
+                                                    2030 </td>
+                                                <td
+                                                    class="align-middle text-center d-flex gap-1 justify-content-center">
+                                                    <a class="btn btn-outline-main mb-0 px-2 py-2"
+                                                        href="Admin_AllOrder(info).html">
+                                                        <i class="fa-solid fa-circle-info ms-1"></i>
+                                                        اتخاذ اجراء
+                                                    </a>
+
+
+                                                </td>
+                                            </tr>
+
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- البجنيشن -->
+                        <div class="paginationConrainer">
+                            <div
+                                class="nav nav-tabs nav nav-pills nav-fill p-1 flex-row bgGray justify-content-between">
+                                <div class="numOfPage d-flex align-content-center gap-2">
+                                    <span class="text-dark">عدد العناصر:</span>
+                                    <select class="customSelect form-select form-select-sm w-auto pe-4 ps-2 "
+                                        aria-label="Small select example">
+                                        <option value="1">10</option>
+                                        <option value="2">20</option>
+                                        <option value="3">30</option>
+                                    </select>
+                                </div>
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination mb-0">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+
+
+
+
+        </div>
+        </div>
+    </main>
+
+    <!-- add  Modal -->
+    <div class="modal fade modal-lg" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <!-- data-bs-toggle="modal" data-bs-target="#oldModal" -->
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"> اضافة</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">اسم السنة</label>
+                                <select class="form-select customSelect" aria-label="Default select example">
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12 ">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">تاريخ البدء</label>
+                                <input type="date" class="form-control" id="exampleFormControlInput1">
+                            </div>
+                        </div>
+                        <div class="col-12 ">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">تاريخ الانتهاء</label>
+                                <input type="date" class="form-control" id="exampleFormControlInput1">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div
+                                class="justify-content-end justify-content-endalign-items-end blue cardInfoHomePage d-flex flex-row-reverse form-check noHover p-0 mb-3">
+                                <span class="titleOfcardInfoHomePage position-relative me-5 mb-1">الحقل مطلوب</span>
+                                <input class="form-check-input" type="checkbox" value="" id="fcustomCheck1" checked="">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary submitOrder" id="submitOrder">حفظ</button>
+                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">الغاء</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Modal -->
+
+    <!-- edit  Modal -->
+    <div class="modal fade modal-lg" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <!-- data-bs-toggle="modal" data-bs-target="#oldModal" -->
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"> اضافة</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">اسم السنة</label>
+                                <select class="form-select customSelect" aria-label="Default select example">
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12 ">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">تاريخ البدء</label>
+                                <input type="date" class="form-control" id="exampleFormControlInput1">
+                            </div>
+                        </div>
+                        <div class="col-12 ">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">تاريخ الانتهاء</label>
+                                <input type="date" class="form-control" id="exampleFormControlInput1">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div
+                                class="justify-content-end justify-content-endalign-items-end blue cardInfoHomePage d-flex flex-row-reverse form-check noHover p-0 mb-3">
+                                <span class="titleOfcardInfoHomePage position-relative me-5 mb-1">الحقل مطلوب</span>
+                                <input class="form-check-input" type="checkbox" value="" id="fcustomCheck1" checked="">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary submitOrder" id="submitOrder">حفظ</button>
+                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">الغاء</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Modal -->
+
+
+
+    <!-- filterModal -->
+    <div class="modal fade modal-lg" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="filterModalLabel">فلترة النتائج</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">الوحدة</label>
+                                <select class="form-select customSelect" aria-label="Default select example">
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">الخدمة</label>
+                                <select class="form-select customSelect" aria-label="Default select example">
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">الكلية</label>
+                                <select class="form-select customSelect" aria-label="Default select example">
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">المرحلة الدراسية</label>
+                                <select class="form-select customSelect" aria-label="Default select example">
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">تاريخ التقديم</label>
+                                <input type="date" class="form-control" id="exampleFormControlInput1">
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">تاريخ اخر حركة</label>
+                                <input type="date" class="form-control" id="exampleFormControlInput1">
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">الجنسية</label>
+                                <select class="form-select customSelect" aria-label="Default select example">
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-4">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">نوع المنحة</label>
+                                <div class="d-flex justify-content-evenly align-items-center gap-2">
+                                    <div
+                                        class=" justify-content-endalign-items-end blue cardInfoHomePage d-flex flex-row-reverse form-check noHover p-0 mb-3">
+                                        <span class="titleOfcardInfoHomePage position-relative me-5 mb-1">داخلي</span>
+                                        <input class="form-check-input" type="checkbox" value="" id="fcustomCheck1"
+                                            checked="">
+                                    </div>
+                                    <div
+                                        class=" justify-content-endalign-items-end blue cardInfoHomePage d-flex flex-row-reverse form-check noHover p-0 mb-3">
+                                        <span class="titleOfcardInfoHomePage position-relative me-5 mb-1">خارجي</span>
+                                        <input class="form-check-input" type="checkbox" value="" id="fcustomCheck1"
+                                            checked="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">الجنس</label>
+                                <div class="d-flex justify-content-evenly align-items-center gap-2">
+                                    <div
+                                        class=" justify-content-endalign-items-end blue cardInfoHomePage d-flex flex-row-reverse form-check noHover p-0 mb-3">
+                                        <span class="titleOfcardInfoHomePage position-relative me-5 mb-1">ذكر</span>
+                                        <input class="form-check-input" type="checkbox" value="" id="fcustomCheck1"
+                                            checked="">
+                                    </div>
+                                    <div
+                                        class=" justify-content-endalign-items-end blue cardInfoHomePage d-flex flex-row-reverse form-check noHover p-0 mb-3">
+                                        <span class="titleOfcardInfoHomePage position-relative me-5 mb-1">انثى</span>
+                                        <input class="form-check-input" type="checkbox" value="" id="fcustomCheck1"
+                                            checked="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="">فلترة</button>
+                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">الغاء</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- filterModal -->
+    <!--   Core JS Files   -->
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <!-- خاصه بالسايد بار -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="../js/core/popper.min.js"></script>
+    <script src="../js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="../js/plugins/smooth-scrollbar.min.js"></script>
+    <!--  -->
+
+    <script src="../js/all.min.js"></script>
+    <script src="../js/core/bootstrap.min.js"></script>
+    <!-- تحوي الملف الى اكسل -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script>
+        // تصدير الى ملف اكسل
+        function ExportTableToExxel(tableID) {
+            console.log('exportToExcel clicked')
+
+            var table = document.getElementById(tableID);
+            const workbook = XLSX.utils.table_to_book(table, { sheet: "Sheet1" });
+            XLSX.writeFile(workbook, `${tableID}.xlsx`);
+        }
+
+
+        // document.getElementById('exportToExcel').addEventListener('click', function() {
+        //     console.log('exportToExcel clicked')
+        //     const table = document.getElementById('dataTableToExcel');
+        //     console.log(table)
+        //     const workbook = XLSX.utils.table_to_book(table, { sheet: "Sheet1" });
+        //     XLSX.writeFile(workbook, 'data.xlsx');
+        // });
+    </script>
+    <!-- sweetalert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script>
+        // document.getElementById('confirmDelete').onclick = function () {
+        //     Swal.fire({
+        //         title: 'هل أنت متأكد من الحذف؟',
+        //         text: 'هذا النص هو مثال نص تجريبي يمكن أن يستبدل في نفس المساحة. لقد تم توليد هذا النص من مولد النص العربي.',
+        //         icon: 'warning',
+        //         showCancelButton: true,
+        //         customClass: {
+        //             confirmButton: 'btn btn-danger w-100',
+        //             cancelButton: 'btn btn-outline-danger bg-body w-100'
+        //         },
+        //         confirmButtonColor: '#d33',
+        //         cancelButtonColor: '#3085d6',
+        //         confirmButtonText: 'حذف',
+        //         cancelButtonText: 'إلغاء'
+        //     }).then((result) => {
+        //         if (result.isConfirmed) {
+        //             Swal.fire(
+        //                 'تم الحذف!',
+        //                 'لقد تم حذف العنصر بنجاح.',
+        //                 'success'
+        //             );
+        //         }
+        //     });
+        // };
+
+        const buttons = document.querySelectorAll('.submitOrder');
+
+        // إضافة حدث click لكل زر
+        buttons.forEach(button => {
+            button.onclick = function () {
+                // إغلاق الـ Modal
+                closeAllModals();
+
+
+                console.log('ll');
+                // تشغيل SweetAlert2
+                Swal.fire({
+                    title: 'تم الحفظ بنجاح!',
+                    text: 'هذا النص هو مثال نص تجريبي يمكن أن يستبدل في نفس المساحة. لقد تم توليد هذا النص من مولد النص العربي.',
+                    icon: 'success',
+                    // showCancelButton: true,
+                    confirmButtonText: 'شكرا',
+                    // cancelButtonText: 'شكرا',
+                    customClass: {
+                        confirmButton: 'btn btn-primary w-100',
+                        cancelButton: 'btn btn-outline-primary w-100'
+                    }
+                })
+            };
+        })
+
+        // إغلاق جميع الموديلات
+        function closeAllModals() {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modalElement => {
+                const modalInstance = bootstrap.Modal.getInstance(modalElement);
+                if (modalInstance) {
+                    modalInstance.hide();
+                }
+            });
+        }
+    </script>
+    <!--  -->
+
+    <script src="../js/argon-dashboard.js"></script>
+</body>
+
+</html>
