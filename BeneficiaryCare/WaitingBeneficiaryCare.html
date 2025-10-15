@@ -597,8 +597,8 @@
                     </div>
                     <div class="tab-pane" id="simple-tabpanel-1" role="tabpanel" aria-labelledby="simple-tab-1">
 
-                        <div class="container">
-                            <div class="row">
+                        <div class="">
+                            <div class="chatrow">
 
                                 <section class="discussions">
                                     <div class="discussion search">
@@ -615,8 +615,8 @@
                                         <div class="desc-contact">
                                             <p class="name">Megan Leib</p>
                                             <p class="message">9 pm at the bar if possible 😳</p>
+                                            <p class="timeSide">11/05/2025 2:17 PM</p>
                                         </div>
-                                        <div class="timer">12 sec</div>
                                     </div>
 
                                     <div class="discussion">
@@ -628,7 +628,6 @@
                                             <p class="name">Dave Corlew</p>
                                             <p class="message">Let's meet for a coffee or something today ?</p>
                                         </div>
-                                        <div class="timer">3 min</div>
                                     </div>
 
                                     <div class="discussion">
@@ -639,7 +638,6 @@
                                             <p class="name">Jerome Seiber</p>
                                             <p class="message">I've sent you the annual report</p>
                                         </div>
-                                        <div class="timer">42 min</div>
                                     </div>
 
                                     <div class="discussion">
@@ -651,7 +649,6 @@
                                             <p class="name">Thomas Dbtn</p>
                                             <p class="message">See you tomorrow ! 🙂</p>
                                         </div>
-                                        <div class="timer">2 hour</div>
                                     </div>
 
                                     <div class="discussion">
@@ -662,7 +659,6 @@
                                             <p class="name">Elsie Amador</p>
                                             <p class="message">What the f**k is going on ?</p>
                                         </div>
-                                        <div class="timer">1 day</div>
                                     </div>
 
                                     <div class="discussion">
@@ -673,7 +669,6 @@
                                             <p class="name">Billy Southard</p>
                                             <p class="message">Ahahah 😂</p>
                                         </div>
-                                        <div class="timer">4 days</div>
                                     </div>
 
                                     <div class="discussion">
@@ -685,19 +680,20 @@
                                             <p class="name">Paul Walker</p>
                                             <p class="message">You can't see me</p>
                                         </div>
-                                        <div class="timer">1 week</div>
                                     </div>
                                 </section>
                                 <section class="chat">
                                     <div class="header-chat">
-                                        <i class="icon fa fa-user-o" aria-hidden="true"></i>
+                                        <i class="icon fa-solid fa-user" aria-hidden="true"></i>
                                         <p class="name">Megan Leib</p>
                                         <i class="icon clickable fa fa-ellipsis-h right" aria-hidden="true"></i>
                                     </div>
                                     <div class="messages-chat">
-                                        <div class="message">
+                                        <div class="message ">
                                             <div class="photo"
                                                 style="background-image: url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);">
+                                                <div class="online"></div>
+
                                             </div>
                                             <p class="text"> Hi, how are you ? </p>
                                         </div>
@@ -705,15 +701,17 @@
                                             <p class="text"> What are you doing tonight ? Want to go take a drink ?</p>
                                         </div>
                                         <p class="time"> 14h58</p>
-                                        <div class="message text-only">
+                                        <div class="message left  text-only">
                                             <div class="response">
                                                 <p class="text"> Hey Megan ! It's been a while 😃</p>
                                                 <div class="photo"
                                                     style="background-image: url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);">
+                                                    <div class="online"></div>
+
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="message">
+                                        <div class="message left">
                                             <div class="response">
                                                 <p class="text"> When can we meet ?</p>
                                             </div>
@@ -722,32 +720,38 @@
                                         <div class="message">
                                             <div class="photo"
                                                 style="background-image: url(https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);">
+                                                <div class="online"></div>
+
                                             </div>
                                             <p class="text"> 9 pm at the bar if possible 😳</p>
                                         </div>
                                         <p class="time"> 15h09</p>
                                     </div>
                                     <div class="footer-chat">
-                                        <i class="icon fa fa-smile-o clickable" style="font-size:25pt;"
+                                        <i class="icon fa-regular fa-face-smile clickable" style="font-size:25pt;"
                                             aria-hidden="true"></i>
                                         <input type="text" class="write-message"
                                             placeholder="Type your message here"></input>
-                                        <i class="icon send fa fa-paper-plane-o clickable" aria-hidden="true"></i>
+                                        <svg class="icon send fa-solid fa-paper-plane clickable"
+                                            aria-hidden="true"></svg>
                                     </div>
                                 </section>
                             </div>
                         </div>
 
                         <style>
-                            .container {
-                                padding: 0;
-                                background-color: #FFF;
-                                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-                                height: 700px;
-                            }
+
 
                             /* === CONVERSATIONS === */
+                            .chatrow{
+                                --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex
+;
+    flex-wrap: wrap;
 
+    width: 100%;
+                            }
                             .discussions {
                                 width: 35%;
                                 height: 700px;
@@ -822,7 +826,8 @@
                             }
 
                             .discussions .discussion .photo {
-                                margin-left: 20px;
+                                position: relative;
+                                margin: 0 20px;
                                 display: block;
                                 width: 45px;
                                 height: 45px;
@@ -832,6 +837,11 @@
                                 background-position: center;
                                 background-size: cover;
                                 background-repeat: no-repeat;
+                            }
+
+                            .timeSide {
+                                font-size: 12px;
+                                margin: 0;
                             }
 
                             .online {
@@ -846,8 +856,9 @@
                             }
 
                             .desc-contact {
-                                height: 43px;
-                                width: 50%;
+                                /* height: 43px; */
+                                height: fit-content;
+                                /* width: 50%; */
                                 white-space: nowrap;
                                 overflow: hidden;
                                 text-overflow: ellipsis;
@@ -879,7 +890,7 @@
                             }
 
                             .chat {
-                                width: calc(73% - 85px);
+                                width: calc(65%);
                             }
 
                             .header-chat {
@@ -888,6 +899,7 @@
                                 box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.100);
                                 display: flex;
                                 align-items: center;
+                                padding: 0 10px;
                             }
 
                             .chat .header-chat .icon {
@@ -898,6 +910,7 @@
 
                             .chat .header-chat .name {
                                 margin: 0 0 0 20px;
+
                                 text-transform: uppercase;
                                 font-family: 'Montserrat', sans-serif;
                                 font-size: 13pt;
@@ -906,11 +919,15 @@
 
                             .chat .header-chat .right {
                                 position: absolute;
-                                right: 40px;
+                                left: 20px;
                             }
 
                             .chat .messages-chat {
                                 padding: 25px 15px;
+                                overflow-y: scroll;
+                                height: 540px;
+                                padding-left: 0;
+
                             }
 
                             .chat .messages-chat .message {
@@ -918,6 +935,11 @@
                                 align-items: center;
                                 margin-bottom: 8px;
                             }
+
+                            .chat .messages-chat .message {
+                                margin-left: 5px;
+                            }
+
 
                             .chat .messages-chat .message .photo {
                                 position: relative;
@@ -944,10 +966,12 @@
                             }
 
                             .time {
-                                font-size: 10px;
+                                font-size: 12px;
                                 color: lightgrey;
                                 margin-bottom: 10px;
                                 margin-left: 85px;
+                                text-align: center;
+                                font-weight: bold;
                             }
 
                             .response-time {
@@ -964,18 +988,20 @@
                             }
 
                             .response .text {
-                                background-color: #e3effd !important;
+                                    background: var(--second-color) !important;
+    color: white;
                             }
 
                             .footer-chat {
-                                width: calc(65% - 66px);
-                                height: 80px;
+                                height: 70px;
                                 display: flex;
                                 align-items: center;
                                 position: absolute;
                                 bottom: 0;
                                 background-color: transparent;
                                 border-top: 2px solid #EEE;
+                                position: relative;
+                                width: 100%;
 
                             }
 
@@ -987,9 +1013,9 @@
 
                             .chat .footer-chat .send {
                                 color: #fff;
-                                background-color: #4f6ebd;
+                                background-color: var(--second-color) ;
                                 position: absolute;
-                                right: 50px;
+                                left: 0;
                                 padding: 12px 12px 12px 12px;
                                 border-radius: 50px;
                                 font-size: 14pt;
