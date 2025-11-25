@@ -689,7 +689,15 @@
                                         <div class="d-flex w-100 align-content-center">
                                             <i class="icon fa-solid fa-user" aria-hidden="true"></i>
                                             <p class="name">Megan Leib</p>
-                                            <i class="icon clickable fa fa-ellipsis-h right" aria-hidden="true"></i>
+                                            <!-- دروب داون الخيارات -->
+                                            <div class="dropdown chat-dropdown right">
+                                                <i class="icon clickable fa fa-ellipsis-h" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i>
+                                                <ul class="dropdown-menu dropdown-menu-end">
+                                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-download me-2"></i>تحميل المحادثة</a></li>
+                                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user-plus me-2"></i>تحويل لموظف آخر</a></li>
+                                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-circle-xmark me-2 text-danger"></i>إغلاق المحادثة</a></li>
+                                                </ul>
+                                            </div>
                                         </div>
                                         <div class="row">
                                             <div class="col">
@@ -751,11 +759,29 @@
                                         </div>
                                         <p class="time"> 15h09</p>
                                     </div>
+                                    <!-- مربع معاينة الملف المرفق -->
+                                    <div class="file-preview-container" id="filePreviewContainer"
+                                        style="display: none;">
+                                        <div class="file-preview-box">
+                                            <i class="fa-solid fa-file file-icon"></i>
+                                            <span class="file-name" id="fileName">اسم الملف</span>
+                                            <i class="fa-solid fa-xmark remove-file clickable" id="removeFile"
+                                                onclick="removeSelectedFile()"></i>
+                                        </div>
+                                    </div>
                                     <div class="footer-chat">
-                                        <i class="icon fa-regular fa-face-smile clickable" style="font-size:25pt;"
-                                            aria-hidden="true"></i>
+                                        <!-- زر رفع الملفات -->
+                                        <label for="fileInput" class="attachment-btn clickable">
+                                            <i class="fa-solid fa-paperclip" style="font-size:18pt;"
+                                                aria-hidden="true"></i>
+                                        </label>
+                                        <input type="file" id="fileInput" class="file-input-hidden"
+                                            accept="image/*,.pdf,.doc,.docx,.xls,.xlsx"
+                                            onchange="handleFileSelect(this)">
+
                                         <input type="text" class="write-message"
                                             placeholder="Type your message here"></input>
+                                        <span class="seprator">|</span>
                                         <select class="customSelect form-select form-select-sm w-auto pe-4 ps-2 "
                                             aria-label="Small select example">
                                             <option value="1">خاص</option>
@@ -968,6 +994,34 @@
                                 left: 20px;
                             }
 
+                            /* ستايل دروب داون الخيارات */
+                            .chat-dropdown {
+                                position: absolute;
+                                left: 20px;
+                            }
+
+                            .chat-dropdown .dropdown-menu {
+                                min-width: 180px;
+                                padding: 8px 0;
+                                border-radius: 8px;
+                                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                            }
+
+                            .chat-dropdown .dropdown-item {
+                                padding: 10px 15px;
+                                font-size: 14px;
+                                display: flex;
+                                align-items: center;
+                            }
+
+                            .chat-dropdown .dropdown-item:hover {
+                                background-color: #f5f5f5;
+                            }
+
+                            .chat-dropdown .dropdown-item i {
+                                width: 20px;
+                            }
+
                             .chat .messages-chat {
                                 padding: 25px 15px;
                                 overflow-y: scroll;
@@ -1087,7 +1141,7 @@
                                 padding: 12px 12px 12px 12px;
                                 border-radius: 50px;
                                 font-size: 14px;
-                                margin-right: 10px;
+                                margin-right: auto;
                             }
 
                             .chat .footer-chat .name {
@@ -1106,11 +1160,17 @@
                             .write-message {
                                 border: none !important;
                                 width: 60%;
-                                height: 50px;
-                                margin-left: 20px;
+                                height: 40px;
                                 padding: 10px;
                             }
-                            .write-message:focus-visible{
+
+                            .chat .seprator {
+                                margin: 0 10px 4px;
+                                font-size: 30px;
+                                color: var(--second-color);
+                            }
+
+                            .write-message:focus-visible {
                                 outline: 2px solid var(--second-color);
                                 border-radius: 8px;
                             }
@@ -1139,7 +1199,109 @@
                             .clickable {
                                 cursor: pointer;
                             }
+
+                            /* ستايل زر رفع الملفات */
+                            .file-input-hidden {
+                                display: none;
+                            }
+
+                            .attachment-btn {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: #C0C0C0;
+                                margin: 0 15px;
+                                transition: color 0.3s ease;
+                            }
+
+                            .attachment-btn:hover {
+                                color: var(--second-color);
+                            }
+
+                            /* ستايل مربع معاينة الملف */
+                            .file-preview-container {
+                                position: absolute;
+                                bottom: 75px;
+                                right: 15px;
+                                z-index: 10;
+                            }
+
+                            .file-preview-box {
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                                background: #fff;
+                                border: 1px solid #E0E0E0;
+                                border-radius: 8px;
+                                padding: 10px 15px;
+                                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+                                max-width: 300px;
+                            }
+
+                            .file-preview-box .file-icon {
+                                font-size: 20px;
+                                color: var(--second-color);
+                            }
+
+                            .file-preview-box .file-name {
+                                font-size: 13px;
+                                color: #515151;
+                                max-width: 180px;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+
+                            .file-preview-box .remove-file {
+                                font-size: 16px;
+                                color: #dc3545;
+                                transition: transform 0.2s ease;
+                            }
+
+                            .file-preview-box .remove-file:hover {
+                                transform: scale(1.2);
+                            }
                         </style>
+
+                        <!-- سكريبت التعامل مع الملفات -->
+                        <script>
+                            let selectedFile = null;
+
+                            function handleFileSelect(input) {
+                                if (input.files && input.files[0]) {
+                                    selectedFile = input.files[0];
+                                    const fileName = selectedFile.name;
+
+                                    // تحديث اسم الملف في المعاينة
+                                    document.getElementById('fileName').textContent = fileName;
+
+                                    // تغيير الأيقونة حسب نوع الملف
+                                    const fileIcon = document.querySelector('.file-preview-box .file-icon');
+                                    const fileExtension = fileName.split('.').pop().toLowerCase();
+
+                                    if (['jpg', 'jpeg', 'png', 'gif', 'webp'].includes(fileExtension)) {
+                                        fileIcon.className = 'fa-solid fa-image file-icon';
+                                    } else if (fileExtension === 'pdf') {
+                                        fileIcon.className = 'fa-solid fa-file-pdf file-icon';
+                                    } else if (['doc', 'docx'].includes(fileExtension)) {
+                                        fileIcon.className = 'fa-solid fa-file-word file-icon';
+                                    } else if (['xls', 'xlsx'].includes(fileExtension)) {
+                                        fileIcon.className = 'fa-solid fa-file-excel file-icon';
+                                    } else {
+                                        fileIcon.className = 'fa-solid fa-file file-icon';
+                                    }
+
+                                    // إظهار مربع المعاينة
+                                    document.getElementById('filePreviewContainer').style.display = 'block';
+                                }
+                            }
+
+                            function removeSelectedFile() {
+                                selectedFile = null;
+                                document.getElementById('fileInput').value = '';
+                                document.getElementById('filePreviewContainer').style.display = 'none';
+                            }
+                        </script>
 
                     </div>
                     <div class="tab-pane" id="simple-tabpanel-2" role="tabpanel" aria-labelledby="simple-tab-2">
