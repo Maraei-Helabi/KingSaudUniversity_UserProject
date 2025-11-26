@@ -691,26 +691,38 @@
                                             <p class="name">Megan Leib</p>
                                             <!-- دروب داون الخيارات -->
                                             <div class="dropdown chat-dropdown right">
-                                                <i class="icon clickable fa fa-ellipsis-h" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i>
-                                                <ul class="dropdown-menu dropdown-menu-end">
-                                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-download me-2"></i>تحميل المحادثة</a></li>
-                                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user-plus me-2"></i>تحويل لموظف آخر</a></li>
-                                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-circle-xmark me-2 text-danger"></i>إغلاق المحادثة</a></li>
+                                                <i class="icon clickable fa fa-ellipsis-h" data-bs-toggle="dropdown"
+                                                    aria-expanded="false" aria-hidden="true"></i>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item gap-2" data-bs-toggle="modal"
+                                                            data-bs-target="#addModal"><i class="fa-solid fa-reply"></i>
+                                                            <span>تحويل الى موظف</span></a></li>
+                                                    <li><a class="dropdown-item gap-2" href="#"><i
+                                                                class="fa-solid fa-reply-all"></i> <span>تحويل الى
+                                                                وحدة</span></a></li>
+                                                    <li><a class="dropdown-item gap-2" data-bs-toggle="modal"
+                                                            data-bs-target="#ratingModal"><i
+                                                                class="fa-solid fa-star"></i> <span>تقييم الخدمة
+                                                            </span></a></li>
+                                                    <li><a class="dropdown-item gap-2" data-bs-toggle="modal"
+                                                            data-bs-target="#closeModal"><i
+                                                                class="fa-solid fa-circle-xmark me-2 text-danger"></i><span>إغلاق
+                                                                المحادثة</span></a></li>
                                                 </ul>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col">
-                                                <span class="text">عنوان المراسله: تاشيرة الخروج</span>
-                                                <span class="text">عنوان المراسله: تاشيرة الخروج</span>
+                                                <span class="text d-block">عنوان المراسله: تاشيرة الخروج</span>
+                                                <span class="text d-block">عنوان المراسله: تاشيرة الخروج</span>
                                             </div>
                                             <div class="col">
-                                                <span class="text">عنوان المراسله: تاشيرة الخروج</span>
-                                                <span class="text">عنوان المراسله: تاشيرة الخروج</span>
+                                                <span class="text d-block">عنوان المراسله: تاشيرة الخروج</span>
+                                                <span class="text d-block">عنوان المراسله: تاشيرة الخروج</span>
                                             </div>
                                             <div class="col">
-                                                <span class="text">عنوان المراسله: تاشيرة الخروج</span>
-                                                <span class="text">عنوان المراسله: تاشيرة الخروج</span>
+                                                <span class="text d-block">عنوان المراسله: تاشيرة الخروج</span>
+                                                <span class="text d-block">عنوان المراسله: تاشيرة الخروج</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1733,6 +1745,157 @@
         </div>
     </div>
     <!-- filterModal -->
+    <!-- add  Modal -->
+    <div class="modal fade modal-lg" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <!-- data-bs-toggle="modal" data-bs-target="#oldModal" -->
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"> اضافة</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="co">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">اسم المستخدم</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1"
+                                    onfocus="focused(this)" onfocusout="defocused(this)">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">اسم السنة</label>
+                                <select class="form-select customSelect" aria-label="Default select example">
+                                    <option value="1"></option>
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12 ">
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">تاريخ البدء</label>
+                                <input type="date" class="form-control" id="exampleFormControlInput1">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div
+                                class="justify-content-end justify-content-endalign-items-end blue cardInfoHomePage d-flex flex-row-reverse form-check noHover p-0 mb-3">
+                                <span class="titleOfcardInfoHomePage position-relative me-5 mb-1">الحقل مطلوب</span>
+                                <input class="form-check-input" type="checkbox" value="" id="fcustomCheck1" checked="">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary submitOrder" id="submitOrder">حفظ</button>
+                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">الغاء</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- close  Modal -->
+    <div class="modal fade modal-lg" id="closeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <!-- data-bs-toggle="modal" data-bs-target="#oldModal" -->
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"> اغلاق</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive p-0">
+                        <table id="studentDate3" class="customTable table align-items-center mb-0">
+                            <thead>
+                                <tr>
+                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        العنوان</th>
+                                    <th
+                                        class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                        الرسالة</th>
+                                    <th
+                                        class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                        الاجرائات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        رد سريع
+                                    </td>
+                                    <td>
+                                        مرعي علي بن هلابي
+                                    </td>
+                                    <td class="align-middle text-center d-flex gap-1 justify-content-center">
+                                        <a class="btn btn-outline-main mb-0 px-2 py-2" href="Admin_AllOrder(info).html">
+                                            <i class="fa-solid fa-circle-info ms-1"></i>
+                                            اتخاذ اجراء
+                                        </a>
+
+
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary submitOrder" id="submitOrder">حفظ</button>
+                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">الغاء</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ratingModal Modal -->
+    <div class="modal fade modal-lg" id="ratingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">تقييم الخدمة</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="MainColor mb-0 text-center">اعطنا رأيك في الخدمة المطلوبة</p>
+                    <div class="row">
+                        <div class="col">
+                            <span class="text d-block">عنوان المراسله: تاشيرة الخروج</span>
+                            <span class="text d-block">عنوان المراسله: تاشيرة الخروج</span>
+                        </div>
+                        <div class="col">
+                            <span class="text d-block">عنوان المراسله: تاشيرة الخروج</span>
+                            <span class="text d-block">عنوان المراسله: تاشيرة الخروج</span>
+                        </div>
+                    </div>
+                    <div class="rating" id="rating">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                    <textarea class="form-control mt-3" placeholder="اكتب اقتراحاتك" rows="3"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">ارسال</button>
+                    <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">الغاء</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--   Core JS Files   -->
 
     <script src="../js/jquery.min.js"></script>
@@ -1747,6 +1910,30 @@
 
     <script src="../js/all.min.js"></script>
     <script src="../js/core/bootstrap.min.js"></script>
+    <!-- التقييم -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const stars = document.querySelectorAll('.star');
+            let ratingValue = 0;
+
+            stars.forEach(star => {
+                star.addEventListener('click', function () {
+                    ratingValue = this.getAttribute('data-value');
+                    updateStars(ratingValue);
+                });
+            });
+
+            function updateStars(value) {
+                stars.forEach(star => {
+                    if (star.getAttribute('data-value') <= value) {
+                        star.classList.add('checked');
+                    } else {
+                        star.classList.remove('checked');
+                    }
+                });
+            }
+        });
+    </script>
     <!-- تحوي الملف الى اكسل -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
     <script>
